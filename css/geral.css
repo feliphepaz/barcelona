@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0px 60px;
+}
+
+:root {
+  --primary: #03468c;
+  --secundary: #f9314b;
+  --base1: #ffffff;
+  --base2: #000000;
+  --montserrat: "Montserrat", sans-serif;
+  --roboto: "Roboto Mono", monospace;
+  --font18: 1.125rem;
+  --font12: 0.75rem;
+}
+
+body {
+  font-family: var(--roboto);
+  color: var(--base1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.cta {
+  display: flex;
+  align-self: flex-start;
+  border: none;
+  font-family: var(--roboto) !important;
+  font-size: var(--font18);
+  text-transform: uppercase;
+  background: var(--secundary);
+  color: var(--base1);
+  padding: 15px 20px;
+  text-decoration: none;
+}

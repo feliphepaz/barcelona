@@ -1,5 +1,88 @@
 .header {
   display: block;
-  background: red;
-  height: 200px;
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.2) 0%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    #03468c;
+  height: 150px;
+}
+
+.header .container {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-redes p {
+  font-size: var(--font12);
+}
+
+.menu {
+  display: flex;
+}
+
+.menu li a {
+  color: var(--base1);
+  font-size: var(--font18);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.menu li {
+  margin-right: 60px;
+}
+
+.menu li:last-child {
+  margin-right: 0px;
+}
+
+.redes {
+  display: flex;
+  align-items: center;
+}
+
+.menu-redes nav::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  margin: 15px 0px 10px 0px;
+  background: var(--secundary);
+}
+
+.redes-lista {
+  display: flex;
+}
+
+.redes-lista li {
+  margin-left: 10px;
+}
+
+.cta-visite {
+  display: flex;
+  flex-direction: column;
+}
+
+.cta-visite a:nth-child(2) {
+  font-size: var(--font18);
+  color: var(--base1);
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+.cta-visite a:nth-child(2)::after {
+  content: "❯❯";
+  display: inline-block;
+  position: relative;
+  top: -2px;
+  letter-spacing: -4px;
+  color: var(--secundary);
+  margin-left: 5px;
+}
+
+.menu-redes,
+.cta-visite {
+  margin-top: -40px;
 }
