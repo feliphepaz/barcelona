@@ -21,6 +21,10 @@ body {
   color: var(--base1);
 }
 
+.echo {
+  color: black !important;
+}
+
 * {
   box-sizing: border-box;
 }
