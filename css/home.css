@@ -8,6 +8,31 @@ height: 700px;
 width: 50%;
 }
 
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-decoration: none;
+  padding: 0px 60px 70px 60px;
+}
+
+.banner h2 {
+  font-family: var(--montserrat);
+  font-size: var(--font32);
+  color: var(--base1);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.banner legend {
+  color: var(--base1);
+  background: var(--primary);
+  align-self: flex-start;
+  padding: 5px 10px;
+  font-size: var(--font12);
+  margin-bottom: 5px;
+}
+
 
 @keyframes anima {
   0% {
