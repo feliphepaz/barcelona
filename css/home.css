@@ -1,0 +1,19 @@
+.banners .container {
+  max-width: none;
+  padding: 0px;
+}
+
+.banner {
+height: 700px;
+width: 50%;
+}
+
+
+@keyframes anima {
+  0% {
+    width: 50%;
+  }
+  100% {
+    width: 70%;
+  }
+}

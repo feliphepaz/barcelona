@@ -7,7 +7,7 @@ function post_data($arg) {
     'id' => $posts->ID,
     'title' => $posts->post_title,
     'content' => $posts->post_content,
-    'image' => get_the_post_thumbnail($posts->ID)
+    'image' => get_the_post_thumbnail_url($posts->ID)
     );
     return $post;
 }
@@ -15,9 +15,17 @@ function post_data($arg) {
 ?>
 
 <?php get_header(); ?>
-    <div class='echo'>
-        <?= post_data(0)['title'] ?>
-    </div>
-    <?php wp_footer(); ?>
-</body>
-</html>
+    <section class='banners'>
+        <div class='container'>
+            <a class='banner' href="" data-link='<?= post_data(0)['image']; ?>'>
+                <legend>Data da Notícia</legend>
+                <h2><?= post_data(0)['title']; ?></h2>
+            </a>
+
+            <a class='banner' href="" data-link='<?= post_data(1)['image']; ?>'>
+                <legend>Data da Notícia</legend>
+                <h2><?= post_data(1)['title']; ?></h2>
+            </a>
+        </div>
+    </section>
+<?php get_footer(); ?>

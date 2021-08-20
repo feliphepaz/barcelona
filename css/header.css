@@ -1,4 +1,6 @@
 .header {
+  position: relative;
+  z-index: 2;
   display: block;
   background: linear-gradient(
       180deg,
@@ -86,3 +88,4 @@
 .cta-visite {
   margin-top: -40px;
 }
+
