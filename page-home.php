@@ -49,10 +49,10 @@ function post_data($arg) {
             <div class='match-day'>
                 <p class='rest'>Faltam</p>
                 <div class='day'>
-                    <p>04 <span>D</span></p>
-                    <p>13 <span>H</span></p>
-                    <p>06 <span>M</span></p>
-                    <p>20 <span>S</span></p>
+                    <p><span class='number'></span> <span class='atr'>D</span></p>
+                    <p><span class='number'></span> <span class='atr'>H</span></p>
+                    <p><span class='number'></span> <span class='atr'>M</span></p>
+                    <p><span class='number'></span> <span class='atr'>S</span></p>
                 </div>
                 <a class='cta' href="">Comprar Ingressos</a>
             </div>

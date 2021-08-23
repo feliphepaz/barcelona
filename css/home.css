@@ -105,6 +105,7 @@ width: 50%;
 .match-day {
   display: flex;
   flex-direction: column;
+  width: 400px;
 }
 
 .match-day .rest {
@@ -117,6 +118,8 @@ width: 50%;
 .match-day .day {
   display: flex;
   margin: 20px 0px;
+  width: 100%;
+  justify-content: center;
 }
 
 .match-day .day p + p {
@@ -126,17 +129,31 @@ width: 50%;
 .match-day .day p {
   display: flex;
   align-items: center;
+}
+
+.match-day .day .number {
+  align-items: center;
   font-family: var(--montserrat);
   font-size: var(--font32);
   letter-spacing: 5px;
+  width: 50px;
+  text-align: center;
 }
 
-.match-day .day p span {
+.start-game {
+  font-family: var(--montserrat);
+  font-size: var(--font32);
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.match-day .day .atr {
   font-family: var(--roboto);
   font-size: var(--font14);
   text-transform: uppercase;
   letter-spacing: 4px;
-  margin-left: 10px;
+  margin-left: 5px;
   color: var(--secundary);
 }
 
