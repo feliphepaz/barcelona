@@ -161,3 +161,7 @@ width: 50%;
   justify-content: center;
   align-self: center;
 }
+
+.versus img {
+  width: 130px;
+}

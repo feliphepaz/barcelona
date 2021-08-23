@@ -67,6 +67,12 @@ function countdown(day) {
 
 const containerDay = document.querySelector('.match-day .day');
 const containerNumbers = document.querySelectorAll('.match-day .day p');
+const data = document.querySelector('.versus').dataset.day;
+const horario = document.querySelector('.versus').dataset.time;
+
+const cleanData = data.replace(/(\d{2})\/(\d{2})\/(\d{4})/g, '$1');
+
+console.log(cleanData);
 
 const h2 = document.createElement('h2');
 h2.innerText = 'O jogo começou!';
@@ -74,7 +80,7 @@ h2.classList.add('start-game');
 
 const matchInfo = {
   data() {
-    countdown('23 August 2021 16:40:00 GMT-0300');
+    countdown(data);
   },
   gameStart(start) {
     numbers.forEach(number => {

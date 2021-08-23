@@ -36,10 +36,10 @@ function post_data($arg) {
             <div class='match-data'>
                 <p class='league'>Campeonato Baiano</p>
                 <p class='stadium'>Estádio Mario Pessoa</p>
-                <div class='versus'>
-                    <img src="<?= $style; ?>/img/barcelona_match.png" alt="">
+                <div class='versus' data-day='<?= get_post_meta(get_the_ID(), 'data', true); ?>' data-time='<?= get_post_meta(get_the_ID(), 'horario', true); ?>'>
+                    <img src="<?= $style; ?>/img/logo.png" alt="">
                     <span>X</span>
-                    <img src="<?= $style; ?>/img/olimpia_match.png" alt="">
+                    <img src="<?= $style; ?>/img/escudos/<?= get_post_meta(get_the_ID(), 'adversario', true); ?>.svg" alt="">
                 </div>
                 <p class='date'>11 de Agosto</p>
             </div>
