@@ -1,3 +1,5 @@
+/* Banners */
+
 .banners .container {
   max-width: none;
   padding: 0px;
@@ -41,4 +43,104 @@ width: 50%;
   100% {
     width: 70%;
   }
+}
+
+/* Match */
+
+.match {
+  background: linear-gradient(180deg, #000000 0%, #03468C 100%);
+  padding: 60px 0px;
+}
+
+.match .container {
+  justify-content: center;
+  align-items: center;
+}
+
+.divide {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 220px;
+  background: var(--secundary);
+  margin: 0px 60px
+}
+
+.match-data .league {
+  font-size: var(--font14);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.match-data .stadium {
+  font-size: var(--font12);
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.match-data .date {
+  font-family: var(--montserrat);
+  font-size: var(--font14);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: var(--secundary);
+}
+
+.versus {
+  margin: 10px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 400px;
+}
+
+.versus span {
+  font-family: var(--montserrat);
+  font-size: var(--font14);
+}
+
+.match-day {
+  display: flex;
+  flex-direction: column;
+}
+
+.match-day .rest {
+  font-size: var(--font14);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-align: center;
+}
+
+.match-day .day {
+  display: flex;
+  margin: 20px 0px;
+}
+
+.match-day .day p + p {
+  margin-left: 20px;
+}
+
+.match-day .day p {
+  display: flex;
+  align-items: center;
+  font-family: var(--montserrat);
+  font-size: var(--font32);
+  letter-spacing: 5px;
+}
+
+.match-day .day p span {
+  font-family: var(--roboto);
+  font-size: var(--font14);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-left: 10px;
+  color: var(--secundary);
+}
+
+.match-day .cta {
+  justify-content: center;
+  align-self: center;
 }
