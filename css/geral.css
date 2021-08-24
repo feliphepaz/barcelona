@@ -43,3 +43,9 @@ body {
   padding: 15px 20px;
   text-decoration: none;
 }
+
+.cta:hover {
+  background: var(--base1);
+  color: var(--secundary);
+  transition: 0.4s;
+}

@@ -28,6 +28,9 @@ async function fetchAPI() {
   console.log(resolve);
 }
 
+
+// Data e countdown
+
 const numbers = document.querySelectorAll('.number');
 
 function countdown(day) {
@@ -67,35 +70,39 @@ function countdown(day) {
 
 const containerDay = document.querySelector('.match-day .day');
 const containerNumbers = document.querySelectorAll('.match-day .day p');
-const data = document.querySelector('.versus').dataset.day;
-const horario = document.querySelector('.versus').dataset.time;
+const containerDate = document.querySelector('.match-data .date');
+const versus = document.querySelector('.versus');
+const data = versus.dataset.day;
+const horario = versus.dataset.time;
 
-const cleanData = data.replace(/(\d{2})\/(\d{2})\/(\d{4})/g, '$1');
+function formatDate() {
+  let extensiveDate = ''
+  const months = ["January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"
+  ];
+  const cleanMonth = +data.split('/').join('').slice(2,4);
+  extensiveDate = months[cleanMonth - 1];
+  return `$1 ${extensiveDate} $3`
+}
 
-console.log(cleanData);
+function formatDateInDom() {
+  let monthPtBr = ''
+  const monthsBr = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
+  "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
+  ];
+  const cleanMonthBr = +data.split('/').join('').slice(2,4);
+  monthPtBr = monthsBr[cleanMonthBr - 1];
+  return `$1 de ${monthPtBr}`
+}
+
+const cleanDate = data.replace(/(\d{2})\/(\d{2})\/(\d{4})/g, formatDate());
+const dateInDom = data.replace(/(\d{2})\/(\d{2})\/(\d{4})/g, formatDateInDom());
+
+const completeDate = `${cleanDate} ${horario} GMT-0300`;
 
 const h2 = document.createElement('h2');
 h2.innerText = 'O jogo começou!';
 h2.classList.add('start-game');
-
-const matchInfo = {
-  data() {
-    countdown(data);
-  },
-  gameStart(start) {
-    numbers.forEach(number => {
-      if (start === true && +number.innerText < 0) {
-        containerNumbers.forEach(container => {
-          container.style.display = 'none';
-          containerDay.appendChild(h2);
-        })
-      }
-    })
-  }
-}
-
-matchInfo.data();
-matchInfo.gameStart(true);
 
 const restOfDays = setInterval(() => {
   numbers.forEach(number => {
@@ -108,3 +115,69 @@ const restOfDays = setInterval(() => {
     }
   })
 }, 1000);
+
+
+// Escudos
+
+const teamsSelector = document.querySelectorAll('.versus img');
+const adversary = versus.dataset.adversary;
+
+async function getTeam() {
+  const response = await fetch('https://api.jsonbin.io/b/61250df0c5159b35ae0344f5');
+  const resolve = await response.json();
+  resolve.forEach((r => {
+    if (r.nome == adversary) {
+      teamsSelector[1].src += `/img/escudos/${r.escudo}`;
+    }
+  }))
+}
+
+
+// Mandante
+
+const result = versus.dataset.out;
+
+function isOut(boo) {
+  const casa = document.querySelector('.versus img:first-child');
+  const fora = document.querySelector('.versus img:last-child');
+  const x = document.querySelector('.versus span');
+
+  if (boo === 'fora') {
+    casa.style.order = '3';
+    fora.style.order = '1';
+  } else {
+    casa.style.order = '1';
+    fora.style.order = '3';
+  }
+}
+
+
+// Acionamento das funções
+
+const matchInfo = {
+  data() {
+    countdown(completeDate);
+    containerDate.innerText = dateInDom;
+  },
+  gameStart(start) {
+    numbers.forEach(number => {
+      if (start === true && +number.innerText < 0) {
+        containerNumbers.forEach(container => {
+          container.style.display = 'none';
+          containerDay.appendChild(h2);
+        })
+      }
+    })
+  },
+  nextAdversary() {
+    getTeam()
+  },
+  mandant() {
+    isOut(result);
+  }
+}
+
+matchInfo.data();
+matchInfo.gameStart(true);
+matchInfo.nextAdversary();
+matchInfo.mandant();

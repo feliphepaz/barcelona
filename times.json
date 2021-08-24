@@ -1,0 +1,42 @@
+[
+  {
+    "nome": "Vitória da Conquista",
+    "escudo": "vitoria_da_conquista.svg"
+  },
+  {
+    "nome": "Fluminense de Feira",
+    "escudo": "fluminense_de_feira.svg"
+  },
+  {
+    "nome": "Atlético da Bahia",
+    "escudo": "atletico_ba.svg"
+  },
+  {
+    "nome": "Bahia de Feira",
+    "escudo": "bahia_de_feira.svg"
+  },
+  {
+    "nome": "Bahia",
+    "escudo": "bahia.svg"
+  },
+  {
+    "nome": "Doce Mel",
+    "escudo": "doce_mel.svg"
+  },
+  {
+    "nome": "Jacuipense",
+    "escudo": "jacuipense.svg"
+  },
+  {
+    "nome": "Juazeirense",
+    "escudo": "juazeirense.svg"
+  },
+  {
+    "nome": "Unirb",
+    "escudo": "unirb.png"
+  },
+  {
+    "nome": "Vitória",
+    "escudo": "vitoria.svg"
+  }
+]

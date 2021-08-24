@@ -165,3 +165,20 @@ width: 50%;
 .versus img {
   width: 130px;
 }
+
+.versus {
+  display: flex;
+}
+
+.versus img:first-child {
+  width: 120px;
+  order: 1;
+}
+
+.versus span {
+  order: 2;
+}
+
+.versus img:last-child {
+  order: 3;
+}

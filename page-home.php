@@ -34,14 +34,14 @@ function post_data($arg) {
     <section class='match'>
         <div class='container'>
             <div class='match-data'>
-                <p class='league'>Campeonato Baiano</p>
-                <p class='stadium'>Estádio Mario Pessoa</p>
-                <div class='versus' data-day='<?= get_post_meta(get_the_ID(), 'data', true); ?>' data-time='<?= get_post_meta(get_the_ID(), 'horario', true); ?>'>
-                    <img src="<?= $style; ?>/img/logo.png" alt="">
+                <p class='league'><?= get_post_meta(get_the_ID(), 'campeonato', true); ?></p>
+                <p class='stadium'><?= get_post_meta(get_the_ID(), 'estadio', true); ?></p>
+                <div class='versus' data-day='<?= get_post_meta(get_the_ID(), 'data', true); ?>' data-time='<?= get_post_meta(get_the_ID(), 'horario', true); ?>' data-adversary='<?= get_post_meta(get_the_ID(), 'adversario', true); ?>' data-out='<?= get_post_meta(get_the_ID(), 'casa', true); ?>'>
+                    <img src="<?= $style; ?>/img/escudos/barcelona.svg" alt="">
                     <span>X</span>
-                    <img src="<?= $style; ?>/img/escudos/<?= get_post_meta(get_the_ID(), 'adversario', true); ?>.svg" alt="">
+                    <img src="<?= $style; ?>" alt="">
                 </div>
-                <p class='date'>11 de Agosto</p>
+                <p class='date'></p>
             </div>
 
             <div class='divide'></div>
@@ -54,7 +54,7 @@ function post_data($arg) {
                     <p><span class='number'></span> <span class='atr'>M</span></p>
                     <p><span class='number'></span> <span class='atr'>S</span></p>
                 </div>
-                <a class='cta' href="">Comprar Ingressos</a>
+                <a class='cta' href="<?= get_post_meta(get_the_ID(), 'link', true); ?>" target='_blank'>Comprar Ingressos</a>
             </div>
         </div>
     </section>
