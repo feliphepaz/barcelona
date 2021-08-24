@@ -182,3 +182,49 @@ width: 50%;
 .versus img:last-child {
   order: 3;
 }
+
+/* Noticias */
+
+.notices {
+  background: var(--secundary);
+  padding: 60px 0px;
+}
+
+.notices .container {
+  flex-direction: column;
+}
+
+.col1, .col2 {
+  display: flex;
+}
+
+.col1 .banner + .banner {
+  margin-left: 20px;
+}
+
+.col2 .banner + .banner {
+  margin-left: 20px;
+}
+
+.notices .container .banner {
+  width: 30%;
+  height: 300px;
+  padding: 0px 60px 40px 60px;
+}
+
+.col1 .banner:first-child, .col2 .banner:first-child {
+  width: 40%;
+  height: 360px;
+}
+
+.col2 .banner:nth-child(2), .col2 .banner:nth-child(3) {
+  margin-top: -60px;
+}
+
+.col1 .banner:first-child {
+  margin-bottom: 20px;
+}
+
+.notices .container .banner h2 {
+  font-size: var(--font18);
+}

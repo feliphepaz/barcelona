@@ -58,4 +58,40 @@ function post_data($arg) {
             </div>
         </div>
     </section>
+
+    <section class='notices'>
+        <div class='container'>
+            <div class='col1'>
+                <a class='banner' href="" data-link='<?= post_data(0)['image']; ?>'>
+                    <legend><?= post_data(0)['date'] ?></legend>
+                    <h2><?= post_data(0)['title']; ?></h2>
+                </a>
+                <a class='banner' href="" data-link='<?= post_data(0)['image']; ?>'>
+                    <legend><?= post_data(0)['date'] ?></legend>
+                    <h2><?= post_data(0)['title']; ?></h2>
+                </a>
+                <a class='banner' href="" data-link='<?= post_data(0)['image']; ?>'>
+                    <legend><?= post_data(0)['date'] ?></legend>
+                    <h2><?= post_data(0)['title']; ?></h2>
+                </a>
+            </div>
+            <div class='col2'>
+                <a class='banner' href="" data-link='<?= post_data(0)['image']; ?>'>
+                    <legend><?= post_data(0)['date'] ?></legend>
+                    <h2><?= post_data(0)['title']; ?></h2>
+                </a>
+                <a class='banner' href="" data-link='<?= post_data(0)['image']; ?>'>
+                    <legend><?= post_data(0)['date'] ?></legend>
+                    <h2><?= post_data(0)['title']; ?></h2>
+                </a>
+                <a class='banner' href="" data-link='<?= post_data(0)['image']; ?>'>
+                    <legend><?= post_data(0)['date'] ?></legend>
+                    <h2><?= post_data(0)['title']; ?></h2>
+                </a>
+            </div>
+            <div class='col2'>
+
+            </div>
+        </div>
+    </section>
 <?php get_footer(); ?>
