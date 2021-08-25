@@ -1,3 +1,5 @@
+// Banners
+
 const banners = document.querySelectorAll('.banner');
 
 banners.forEach((banner, index) => {
@@ -20,13 +22,6 @@ banners.forEach((banner, index) => {
       banners[0].style.width = '50%'
   })
 })
-
-
-async function fetchAPI() {
-  const response = await fetch('https://www.googleapis.com/youtube/v3/search?key=AIzaSyCl7BWLz9l918xs3GWuFRLEzri2aZZHibA&channelId=UCzWBYu-vXwIy6Zd5Bs0K2Uw&part=snippet,id&order=date&maxResults=20');
-  const resolve = await response.json();
-  console.log(resolve);
-}
 
 
 // Data e countdown
@@ -181,3 +176,18 @@ matchInfo.data();
 matchInfo.gameStart(true);
 matchInfo.nextAdversary();
 matchInfo.mandant();
+
+
+// Videos
+
+const videos = document.querySelectorAll('.videos-content div iframe');
+
+async function fetchAPI() {
+  const response = await fetch('https://www.googleapis.com/youtube/v3/search?key=AIzaSyCl7BWLz9l918xs3GWuFRLEzri2aZZHibA&channelId=UCzWBYu-vXwIy6Zd5Bs0K2Uw&part=snippet,id&order=date&maxResults=20');
+  const resolve = await response.json();
+  videos.forEach((video, index) => {
+    videos[index].src += resolve.items[index].id.videoId;
+  })
+}
+
+fetchAPI()

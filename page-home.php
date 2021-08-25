@@ -3,9 +3,9 @@
 $style = get_stylesheet_directory_uri();
 
 function post_data($arg) {
-    $posts = get_posts(array(
+    $posts = get_posts([
         'numberposts' => 8
-      ))[$arg];
+      ])[$arg];
     $post = array(
     'id' => $posts->ID,
     'title' => $posts->post_title,
@@ -90,9 +90,24 @@ function post_data($arg) {
                     <legend><?= post_data(7)['date'] ?></legend>
                     <h2><?= post_data(7)['title']; ?></h2>
                 </a>
-            </div>
             <div class='col2'>
+        </div>
+        <a href="">+ Notícias</a>
+    </section>
 
+    <section class='videos'>
+        <div class='container'>
+            <h2 class='title'>TV Barça</h2>
+            <div class='videos-content'>
+                <div class='col1'>
+                    <iframe src="https://www.youtube.com/embed/" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class='col2'>
+                    <iframe src="https://www.youtube.com/embed/" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
             </div>
         </div>
     </section>

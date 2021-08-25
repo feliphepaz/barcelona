@@ -16,6 +16,7 @@
   --font14: 0.875rem;
   --font12: 0.75rem;
   --font32: 2rem;
+  --font64: 4rem;
 }
 
 body {
@@ -48,4 +49,11 @@ body {
   background: var(--base1);
   color: var(--secundary);
   transition: 0.4s;
+}
+
+.title {
+  font-family: var(--montserrat);
+  font-size: var(--font64);
+  text-transform: uppercase;
+  font-weight: 900;
 }
