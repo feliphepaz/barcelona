@@ -3,7 +3,9 @@
 $style = get_stylesheet_directory_uri();
 
 function post_data($arg) {
-    $posts = get_posts()[$arg];
+    $posts = get_posts(array(
+        'numberposts' => 8
+      ))[$arg];
     $post = array(
     'id' => $posts->ID,
     'title' => $posts->post_title,
@@ -62,31 +64,31 @@ function post_data($arg) {
     <section class='notices'>
         <div class='container'>
             <div class='col1'>
-                <a class='banner' href="" data-link='<?= post_data(0)['image']; ?>'>
-                    <legend><?= post_data(0)['date'] ?></legend>
-                    <h2><?= post_data(0)['title']; ?></h2>
+                <a class='banner' href="" data-link='<?= post_data(2)['image']; ?>'>
+                    <legend><?= post_data(2)['date'] ?></legend>
+                    <h2><?= post_data(2)['title']; ?></h2>
                 </a>
-                <a class='banner' href="" data-link='<?= post_data(0)['image']; ?>'>
-                    <legend><?= post_data(0)['date'] ?></legend>
-                    <h2><?= post_data(0)['title']; ?></h2>
+                <a class='banner' href="" data-link='<?= post_data(3)['image']; ?>'>
+                    <legend><?= post_data(3)['date'] ?></legend>
+                    <h2><?= post_data(3)['title']; ?></h2>
                 </a>
-                <a class='banner' href="" data-link='<?= post_data(0)['image']; ?>'>
-                    <legend><?= post_data(0)['date'] ?></legend>
-                    <h2><?= post_data(0)['title']; ?></h2>
+                <a class='banner' href="" data-link='<?= post_data(4)['image']; ?>'>
+                    <legend><?= post_data(4)['date'] ?></legend>
+                    <h2><?= post_data(4)['title']; ?></h2>
                 </a>
             </div>
             <div class='col2'>
-                <a class='banner' href="" data-link='<?= post_data(0)['image']; ?>'>
-                    <legend><?= post_data(0)['date'] ?></legend>
-                    <h2><?= post_data(0)['title']; ?></h2>
+                <a class='banner' href="" data-link='<?= post_data(5)['image']; ?>'>
+                    <legend><?= post_data(5)['date'] ?></legend>
+                    <h2><?= post_data(5)['title']; ?></h2>
                 </a>
-                <a class='banner' href="" data-link='<?= post_data(0)['image']; ?>'>
-                    <legend><?= post_data(0)['date'] ?></legend>
-                    <h2><?= post_data(0)['title']; ?></h2>
+                <a class='banner' href="" data-link='<?= post_data(6)['image']; ?>'>
+                    <legend><?= post_data(6)['date'] ?></legend>
+                    <h2><?= post_data(6)['title']; ?></h2>
                 </a>
-                <a class='banner' href="" data-link='<?= post_data(0)['image']; ?>'>
-                    <legend><?= post_data(0)['date'] ?></legend>
-                    <h2><?= post_data(0)['title']; ?></h2>
+                <a class='banner' href="" data-link='<?= post_data(7)['image']; ?>'>
+                    <legend><?= post_data(7)['date'] ?></legend>
+                    <h2><?= post_data(7)['title']; ?></h2>
                 </a>
             </div>
             <div class='col2'>
