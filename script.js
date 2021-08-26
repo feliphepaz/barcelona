@@ -183,7 +183,7 @@ matchInfo.mandant();
 const videos = document.querySelectorAll('.videos-content div iframe');
 
 async function fetchAPI() {
-  const response = await fetch('https://www.googleapis.com/youtube/v3/search?key=AIzaSyCl7BWLz9l918xs3GWuFRLEzri2aZZHibA&channelId=UCzWBYu-vXwIy6Zd5Bs0K2Uw&part=snippet,id&order=date&maxResults=20');
+  const response = await fetch('https://www.googleapis.com/youtube/v3/search?key=AIzaSyCEc4A5wWiv3zWAAqkqcUEzdk9AINL5kxM&channelId=UCzWBYu-vXwIy6Zd5Bs0K2Uw&part=snippet,id&order=date&maxResults=20');
   const resolve = await response.json();
   videos.forEach((video, index) => {
     videos[index].src += resolve.items[index].id.videoId;

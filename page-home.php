@@ -90,9 +90,11 @@ function post_data($arg) {
                     <legend><?= post_data(7)['date'] ?></legend>
                     <h2><?= post_data(7)['title']; ?></h2>
                 </a>
-            <div class='col2'>
+            </div>
+            <div class='more-notices'>
+                <a href=""><span>+</span> Notícias</a>
+            </div>
         </div>
-        <a href="">+ Notícias</a>
     </section>
 
     <section class='videos'>
@@ -109,6 +111,46 @@ function post_data($arg) {
                     <iframe src="https://www.youtube.com/embed/" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
+            <div class='more-videos'>
+                <a href=""><span>+</span> Para mais vídeos, se <span>inscreva</span> na TV Barça</a>
+            </div>
+        </div>
+    </section>
+
+    <section class='be-part'>
+        <div class='container'>
+            <img src="<?= $style; ?>/img/bfc-onca.png" alt="">
+            <form action="">
+                <div class=form-content>
+                    <div>
+                        <label for="">Nome</label>
+                        <input type="text">
+                        <label for="">E-mail</label>
+                        <input type="text">
+                        <label for="">Cidade</label>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <label for="">CPF</label>
+                        <input type="text">
+                        <label for="">Telefone</label>
+                        <input type="text">
+                        <label for="">Estado</label>
+                        <input type="text">
+                    </div>
+                </div>
+                <div class= 'options'>
+                    <h2>Como você gostaria de participar do Barcelona?</h2>
+                    <div>
+                        <a href="">Com a minha empresa</a>
+                        <a href="">Com sócio torcedor</a>
+                        <a href="">Como jogador</a>
+                        <a href="">Como voluntário</a>
+                        <a href="">Como empresário de jogador</a>
+                    </div>
+                </div>
+            </form>
+
         </div>
     </section>
 <?php get_footer(); ?>
