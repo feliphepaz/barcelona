@@ -119,37 +119,56 @@ function post_data($arg) {
 
     <section class='be-part'>
         <div class='container'>
-            <img src="<?= $style; ?>/img/bfc-onca.png" alt="">
-            <form action="">
-                <div class=form-content>
-                    <div>
-                        <label for="">Nome</label>
-                        <input type="text">
-                        <label for="">E-mail</label>
-                        <input type="text">
-                        <label for="">Cidade</label>
-                        <input type="text">
+            <div>
+                <img src="<?= $style; ?>/img/bfc-onca.png" alt="">
+            </div>
+            <div class='form-container'>
+                <h2 class='title'>Faça parte da nossa história</h2>
+                <form action="">
+                    <div class=form-content>
+                        <div>
+                            <label for="">Nome</label>
+                            <input type="text">
+                            <label for="">E-mail</label>
+                            <input type="text">
+                            <label for="">Cidade</label>
+                            <input type="text">
+                        </div>
+                        <div>
+                            <label for="">CPF</label>
+                            <input type="text">
+                            <label for="">Telefone</label>
+                            <input type="text">
+                            <label for="">Estado</label>
+                            <input type="text">
+                        </div>
                     </div>
-                    <div>
-                        <label for="">CPF</label>
-                        <input type="text">
-                        <label for="">Telefone</label>
-                        <input type="text">
-                        <label for="">Estado</label>
-                        <input type="text">
+                    <div class= 'options'>
+                        <h2>Como você gostaria de participar do Barcelona?</h2>
+                        <div class='options-flex'>
+                            <div>
+                                <a href="" id='business'>Com a minha empresa</a>
+                                <a href="">Como sócio torcedor</a>
+                            </div>
+                            <div>
+                                <a href="">Como jogador</a>
+                                <a href="">Como voluntário</a>
+                            </div>
+                            <a href="">Como empresário de jogador</a>
+                        </div>
                     </div>
-                </div>
-                <div class= 'options'>
-                    <h2>Como você gostaria de participar do Barcelona?</h2>
-                    <div>
-                        <a href="">Com a minha empresa</a>
-                        <a href="">Com sócio torcedor</a>
-                        <a href="">Como jogador</a>
-                        <a href="">Como voluntário</a>
-                        <a href="">Como empresário de jogador</a>
+                    <div class='form-content modal-active' id='business-mod'>
+                        <div>
+                            <label for="">Nome da Empresa</label>
+                            <input type="text">
+                        </div>
+                        <div>
+                            <label for="">CNPJ</label>
+                            <input type="text">
+                        </div>
                     </div>
-                </div>
-            </form>
+                </form>
+            </div>
 
         </div>
     </section>

@@ -190,4 +190,26 @@ async function fetchAPI() {
   })
 }
 
-fetchAPI()
+fetchAPI();
+
+
+// Form 
+
+const btns = document.querySelectorAll('.options-flex a');
+const modal = document.querySelectorAll('.modal-active');
+
+btns.forEach(btn => {
+  btn.addEventListener('click', activeModal);
+})
+
+function activeModal(e) {
+  e.preventDefault();
+  modal.forEach(mod => {
+    const tgtId = e.target.id + '-mod';
+    if (tgtId === mod.id) {
+      mod.style.display = 'flex';
+    }
+  }) 
+}
+
+

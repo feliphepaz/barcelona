@@ -342,47 +342,110 @@ width: 50%;
 
 .be-part {
   background: var(--primary);
-  height: 600px;
   text-transform: uppercase;
   font-size: var(--font18);
+  padding: 60px;
 }
 
 .be-part .container form {
   background: var(--base1);
-  color: var(--primary);
+  padding: 40px;
 }
 
-.be-part .container form .form-content{
+.be-part .container {
+  align-items: center;
+}
+
+.be-part .container form label {
+  color: var(--primary);
+  margin-bottom: 5px;
+}
+
+.form-content div:first-child {
+  margin-right: 20px;
+}
+
+.be-part .container form input {
+  background: var(--secundaryLight);
+  border: none;
+  height: 37px;
+  margin-bottom: 20px;
+}
+
+.be-part .container form input:last-child {
+  margin-bottom: 40px;
+}
+
+.form-content{
   display: flex;
-  color: var(--primary);
 }
 
-.be-part .container form .form-content div:first-child {
+.form-content div:first-child {
   width: 50%;
 }
 
-.be-part .container form .form-content div:last-child {
+.form-content div:last-child {
   width: 50%;
 }
 
-.be-part .container form .form-content div {
+.form-content div {
   display: flex;
   flex-direction: column;
 }
 
-.options div {
+.options .options-flex {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  flex-direction: column;
+  margin-bottom: 40px;
 }
 
-.options div a {
+.options .options-flex > a {
+  width: calc(50% - 10px);
+}
+
+.options .options-flex div {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.options .options-flex div a {
+  width: 50%;
+  text-align: center;
+}
+
+.options .options-flex div a + a {
+  margin-left: 20px;
+}
+
+.options-flex a {
   text-decoration: none;
   color: var(--base);
   padding: 20px;
   background: var(--secundary);
-  margin: 10px;
-
 }
+
+.options h2 {
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-left: 100px;
+}
+
+.form-container > h2 {
+  max-width: 400px;
+  text-align: right;
+  margin-bottom: 40px;
+}
+
+#business-mod {
+  display: none;
+}
+
+
 
 

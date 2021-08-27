@@ -1,0 +1,82 @@
+.footer {
+  background: var(--secundary);
+  padding: 60px 0px;
+}
+
+.footer .container {
+  flex-direction: column;
+}
+
+.footer .container .partners {
+  text-align: center;
+}
+
+.footer .container .divide {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: var(--primary);
+  margin: 60px 0px;
+}
+
+.footer .container .partners p {
+  font-family: var(--montserrat);
+  font-size: var(--font14);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-right: -4px;
+  margin-bottom: 40px;
+}
+
+.footer-navegation {
+  display: flex;
+}
+
+.footer-navegation nav ul li {
+  margin-bottom: 5px;
+}
+
+.footer-navegation nav ul li:last-child {
+  margin-bottom: 0px;
+}
+
+.footer-navegation nav h3, .footer-contact h3 {
+  font-size: var(--font18);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.footer-navegation nav ul li a {
+  color: var(--base1);
+  text-decoration: none;
+  font-size: var(--font14);
+}
+
+.footer-navegation nav + nav {
+  margin-left: 60px;
+}
+
+.divide-vert {
+  display: block;
+  width: 1px;
+  background: var(--primary);
+  margin: 0px 100px;
+}
+
+.footer-contact a {
+  display: block;
+  margin-top: 20px;
+  color: var(--base1);
+  text-decoration: none;
+}
+
+.copy {
+  background: var(--primary);
+  padding: 20px 0px;
+}
+
+.copy p {
+  text-align: center;
+  font-size: var(--font12);
+}
