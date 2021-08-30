@@ -125,7 +125,7 @@ function post_data($arg) {
             <div class='form-container'>
                 <h2 class='title'>Faça parte da nossa história</h2>
                 <form action="">
-                    <div class=form-content>
+                    <div class='form-content form-basic'>
                         <div>
                             <label for="">Nome</label>
                             <input type="text">
@@ -147,26 +147,87 @@ function post_data($arg) {
                         <h2>Como você gostaria de participar do Barcelona?</h2>
                         <div class='options-flex'>
                             <div>
-                                <a href="" id='business'>Com a minha empresa</a>
-                                <a href="">Como sócio torcedor</a>
+                                <button id='business'>Com a minha empresa</button>
+                                <button id='partner'>Como sócio torcedor</button>
                             </div>
                             <div>
-                                <a href="">Como jogador</a>
-                                <a href="">Como voluntário</a>
+                                <button id='player'>Como jogador</button>
+                                <button id='voluntary'>Como voluntário</button>
                             </div>
-                            <a href="">Como empresário de jogador</a>
+                            <button id='manager'>Como empresário de jogador</button>
                         </div>
                     </div>
-                    <div class='form-content modal-active' id='business-mod'>
-                        <div>
+                    <div class='modal' id='business-mod'>
+                        <div class='form-content'>
+                            <div>
+                                <label for="">Nome da Empresa</label>
+                                <input type="text">
+                            </div>
+                            <div>
+                                <label for="">CNPJ</label>
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class='input-full'>
+                            <label for="contribution">Forma de Contribuição</label>
+                            <select name="contribution" id="contribution">
+                                <option value="patrocinio">Patrocínio</option>
+                                <option value="apoio">Apoio</option>
+                            </select>
+                        </div>
+                        <button class='submit' type='submit'>Enviar</button>
+                    </div>
+
+                    <div class='modal' id='partner-mod'>
+                        <div class='input-full'>
+                            <label for="">Data de Nascimento</label>
+                            <input type="date">
+                        </div>
+                        <button class='submit' type='submit'>Enviar</button>
+                    </div>
+
+                    <div class='modal' id='player-mod'>
+                        <div class='form-content'>
+                            <div>
+                                <label for="">Data de Nascimento</label>
+                                <input type="date">
+                            </div>
+                            <div>
+                                <label for="">Posição</label>
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class='input-full'>
+                            <label for="">Já jogou em alguma equipe profissional?</label>
+                            <textarea name="" id="" cols="30" rows="10"></textarea>
+                        </div>
+                        <button class='submit' type='submit'>Enviar</button>
+                    </div>
+
+                    <div class='modal' id='voluntary-mod'>
+                        <div class='input-full'>
+                            <label for="">Data de Nascimento</label>
+                            <input type="date">
+                        </div>
+                        <div class='input-full'>
+                            <label for="">Em que área você quer atuar?</label>
+                            <textarea name="" id="" cols="30" rows="10"></textarea>
+                        </div>
+                        <button class='submit' type='submit'>Enviar</button>
+                    </div>
+
+                    <div class='modal' id='manager-mod'>
+                        <div class='input-full'>
                             <label for="">Nome da Empresa</label>
                             <input type="text">
                         </div>
-                        <div>
-                            <label for="">CNPJ</label>
-                            <input type="text">
+                        <div class='input-full'>
+                            <label for="">Descreva o seu interesse</label>
+                            <textarea name="" id="" cols="30" rows="10"></textarea>
                         </div>
+                        <button class='submit' type='submit'>Enviar</button>
                     </div>
+
                 </form>
             </div>
 

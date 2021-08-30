@@ -365,14 +365,20 @@ width: 50%;
   margin-right: 20px;
 }
 
-.be-part .container form input {
+.be-part .container form input, .be-part .container form select, .be-part .container form textarea {
   background: var(--secundaryLight);
   border: none;
   height: 37px;
   margin-bottom: 20px;
+  outline: none;
 }
 
-.be-part .container form input:last-child {
+.be-part .container form textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.form-basic div input:last-child {
   margin-bottom: 40px;
 }
 
@@ -399,7 +405,7 @@ width: 50%;
   margin-bottom: 40px;
 }
 
-.options .options-flex > a {
+.options .options-flex > button {
   width: calc(50% - 10px);
 }
 
@@ -408,20 +414,38 @@ width: 50%;
   margin-bottom: 20px;
 }
 
-.options .options-flex div a {
+.options .options-flex div button {
   width: 50%;
   text-align: center;
 }
 
-.options .options-flex div a + a {
+.options .options-flex div button + button {
   margin-left: 20px;
 }
 
-.options-flex a {
+.options-flex button, .submit {
   text-decoration: none;
   color: var(--base);
-  padding: 20px;
+  padding: 15px 20px;
   background: var(--secundary);
+  border: none;
+  font-family: var(--roboto);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: var(--font18);
+  text-align: center;
+  cursor: pointer;
+}
+
+.submit {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.options-flex button:hover, .options-flex button.active, .submit:hover, .submit.active {
+  background: var(--base2);
+  color: var(--secundary);
+  transition: 0.4s;
 }
 
 .options h2 {
@@ -442,8 +466,29 @@ width: 50%;
   margin-bottom: 40px;
 }
 
-#business-mod {
+.modal {
   display: none;
+}
+
+.input-full {
+  display: flex;
+  flex-direction: column;
+}
+
+.mod-act {
+  display: block;
+  animation: slide 0.5s forwards;
+}
+
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translate3d(0px, -10px, 0px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+  }
 }
 
 

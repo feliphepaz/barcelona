@@ -195,21 +195,27 @@ fetchAPI();
 
 // Form 
 
-const btns = document.querySelectorAll('.options-flex a');
-const modal = document.querySelectorAll('.modal-active');
+const btns = document.querySelectorAll('.options-flex button');
+const modal = document.querySelectorAll('.modal');
 
 btns.forEach(btn => {
-  btn.addEventListener('click', activeModal);
+  btn.addEventListener('click', handleModal);
 })
 
-function activeModal(e) {
+function handleModal(e) {
   e.preventDefault();
+  const tgtId = e.target.id + '-mod';
   modal.forEach(mod => {
-    const tgtId = e.target.id + '-mod';
     if (tgtId === mod.id) {
-      mod.style.display = 'flex';
+      mod.classList.add('mod-act');
+      btns.forEach(btn => {
+        btn.classList.remove('active');
+      })
+      e.target.classList.add('active');
+    } else {
+      mod.classList.remove('mod-act');
     }
-  }) 
+  })
 }
 
 

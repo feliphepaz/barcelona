@@ -47,7 +47,7 @@ body {
 }
 
 .cta:hover {
-  background: var(--base1);
+  background: var(--base2);
   color: var(--secundary);
   transition: 0.4s;
 }
