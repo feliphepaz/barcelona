@@ -18,7 +18,7 @@ width: 50%;
   padding: 0px 60px 70px 60px;
 }
 
-.banner h2 {
+.banner h2, .blog-post a h2 {
   font-family: var(--montserrat);
   font-size: var(--font32);
   color: var(--base1);
@@ -26,7 +26,7 @@ width: 50%;
   font-weight: 700;
 }
 
-.banner legend {
+.banner legend, .blog-post a legend {
   color: var(--base1);
   background: var(--primary);
   align-self: flex-start;

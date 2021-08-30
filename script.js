@@ -23,6 +23,23 @@ banners.forEach((banner, index) => {
   })
 })
 
+// Noticias
+
+const notices = document.querySelectorAll('.blog-post a img');
+const post = document.querySelectorAll('.blog-post a');
+
+notices.forEach((notice, index) => {
+  notice.style.display = 'none'
+  post[index].style.background = `linear-gradient(180deg, rgba(0, 0, 0, 0) 44.27%, #000000 100%), url(${notice.src}) no-repeat center`
+  post[index].style.backgroundSize = 'cover';
+})
+
+post.forEach((pst, index) => {
+  pst.addEventListener('mouseover', () => {
+    console.log(pst.style.background)
+  })
+})
+
 
 // Data e countdown
 

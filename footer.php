@@ -24,7 +24,7 @@
                 <nav>
                     <h3>Imprensa</h3>
                     <ul>
-                        <li><a href="">Notícias</a></li>
+                        <li><a href="/barcelona/noticias/">Notícias</a></li>
                         <li><a href="">TV Barça</a></li>
                         <li><a href="">Contato</a></li>
                     </ul>
@@ -32,9 +32,9 @@
                 <nav>
                     <h3>Clube</h3>
                     <ul>
-                        <li><a href="">Notícias</a></li>
-                        <li><a href="">TV Barça</a></li>
-                        <li><a href="">Contato</a></li>
+                        <li><a href="">Comprar ingressos</a></li>
+                        <li><a href="">Próximas partidas</a></li>
+                        <li><a href="">Seja sócio</a></li>
                     </ul>
                 </nav>
                 <nav>

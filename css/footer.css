@@ -53,6 +53,10 @@
   font-size: var(--font14);
 }
 
+.footer-navegation nav {
+  width: 100%;
+}
+
 .footer-navegation nav + nav {
   margin-left: 60px;
 }

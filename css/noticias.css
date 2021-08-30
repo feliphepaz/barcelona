@@ -1,0 +1,29 @@
+.posts {
+  padding: 60px 0px;
+  background: var(--base2);
+}
+
+.posts .container {
+  flex-direction: column;
+}
+
+.blog-post {
+  margin-bottom: 60px;
+}
+
+.blog-post a {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-decoration: none;
+  padding: 0px 60px 40px 60px;
+  height: 300px;
+}
+
+.notice-date {
+  margin-bottom: 20px;
+  color: var(--secundary);
+}
+
+

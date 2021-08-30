@@ -11,7 +11,7 @@ function post_data($arg) {
     'title' => $posts->post_title,
     'content' => $posts->post_content,
     'image' => get_the_post_thumbnail_url($posts->ID),
-    'date' => $posts->post_date_gmt
+    'date' => $posts->post_date
     );
     return $post;
 }
@@ -92,7 +92,7 @@ function post_data($arg) {
                 </a>
             </div>
             <div class='more-notices'>
-                <a href=""><span>+</span> Notícias</a>
+                <a href="/barcelona/noticias/"><span>+</span> Notícias</a>
             </div>
         </div>
     </section>
