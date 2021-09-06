@@ -1,0 +1,23 @@
+.post .container {
+  flex-direction: column;
+}
+
+.title-blog {
+  font-size: var(--font64);
+  color: var(--base2);
+}
+
+.text-blog {
+  font-family: var(--montserrat);
+  color: var(--base2);
+}
+
+.text-blog p {
+  font-weight: 400;
+  line-height: 26px;
+  margin-bottom: 20px;
+}
+
+.text-blog h2 {
+  font-weight: 700;
+}

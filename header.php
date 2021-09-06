@@ -12,11 +12,11 @@ $style = get_stylesheet_directory_uri();
     <link rel="stylesheet" href="<?= $style ?>/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
     <?php wp_head(); ?>
 </head>
 
-<body>
+<body class='<?= wp_title(''); ?>'>
     <header class='header'>
         <div class='container'>
             <div>

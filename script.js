@@ -1,51 +1,35 @@
-// Banners
+function homeScripts() {
+  // Banners
 
-const banners = document.querySelectorAll('.banner');
+  const banners = document.querySelectorAll('.banner');
 
-banners.forEach((banner, index) => {
-  const bannerLink = banner.dataset.link;
-  banner.style.background = `linear-gradient(180deg, rgba(0, 0, 0, 0) 44.27%, #000000 100%), url(${bannerLink}) no-repeat center`;
-  banner.style.backgroundSize = 'cover';
+  banners.forEach((banner, index) => {
+    const bannerLink = banner.dataset.link;
+    banner.style.background = `linear-gradient(180deg, rgba(0, 0, 0, 0) 44.27%, #000000 100%), url(${bannerLink}) no-repeat center`;
+    banner.style.backgroundSize = 'cover';
 
-  banner.addEventListener('mouseover', (e) => {
-      banners[0].style.width = '60%';
-      banners[0].style.transition = '0.5s';
-      banners[1].style.width = '40%'
-    if (index === 1) {
-      banners[1].style.width = '60%';
-      banners[1].style.transition = '0.5s';
-      banners[0].style.width = '40%'
-    }
+    banner.addEventListener('mouseover', () => {
+        banners[0].style.width = '60%';
+        banners[0].style.transition = '0.5s';
+        banners[1].style.width = '40%'
+      if (index === 1) {
+        banners[1].style.width = '60%';
+        banners[1].style.transition = '0.5s';
+        banners[0].style.width = '40%'
+      }
+    })
+      banner.addEventListener('mouseout', () => {
+        banners[1].style.width = '50%';
+        banners[0].style.width = '50%'
+    })
   })
-    banner.addEventListener('mouseout', () => {
-      banners[1].style.width = '50%';
-      banners[0].style.width = '50%'
-  })
-})
-
-// Noticias
-
-const notices = document.querySelectorAll('.blog-post a img');
-const post = document.querySelectorAll('.blog-post a');
-
-notices.forEach((notice, index) => {
-  notice.style.display = 'none'
-  post[index].style.background = `linear-gradient(180deg, rgba(0, 0, 0, 0) 44.27%, #000000 100%), url(${notice.src}) no-repeat center`
-  post[index].style.backgroundSize = 'cover';
-})
-
-post.forEach((pst, index) => {
-  pst.addEventListener('mouseover', () => {
-    console.log(pst.style.background)
-  })
-})
 
 
-// Data e countdown
+  // Data e countdown
 
-const numbers = document.querySelectorAll('.number');
+  const numbers = document.querySelectorAll('.number');
 
-function countdown(day) {
+  function countdown(day) {
     const matchDay = new Date(day)
     const actualDay = new Date();
     const futureDiff = matchDay.getTime() - actualDay.getTime();
@@ -78,161 +62,214 @@ function countdown(day) {
     numbers[1].innerText = total().hours;
     numbers[2].innerText = total().minutes;
     numbers[3].innerText = total().seconds;
-}
-
-const containerDay = document.querySelector('.match-day .day');
-const containerNumbers = document.querySelectorAll('.match-day .day p');
-const containerDate = document.querySelector('.match-data .date');
-const versus = document.querySelector('.versus');
-const data = versus.dataset.day;
-const horario = versus.dataset.time;
-
-function formatDate() {
-  let extensiveDate = ''
-  const months = ["January", "February", "March", "April", "May", "June",
-  "July", "August", "September", "October", "November", "December"
-  ];
-  const cleanMonth = +data.split('/').join('').slice(2,4);
-  extensiveDate = months[cleanMonth - 1];
-  return `$1 ${extensiveDate} $3`
-}
-
-function formatDateInDom() {
-  let monthPtBr = ''
-  const monthsBr = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
-  "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
-  ];
-  const cleanMonthBr = +data.split('/').join('').slice(2,4);
-  monthPtBr = monthsBr[cleanMonthBr - 1];
-  return `$1 de ${monthPtBr}`
-}
-
-const cleanDate = data.replace(/(\d{2})\/(\d{2})\/(\d{4})/g, formatDate());
-const dateInDom = data.replace(/(\d{2})\/(\d{2})\/(\d{4})/g, formatDateInDom());
-
-const completeDate = `${cleanDate} ${horario} GMT-0300`;
-
-const h2 = document.createElement('h2');
-h2.innerText = 'O jogo começou!';
-h2.classList.add('start-game');
-
-const restOfDays = setInterval(() => {
-  numbers.forEach(number => {
-    if(+number.innerText < 0) {
-      matchInfo.gameStart(true)
-      clearInterval(restOfDays);
-    } else {
-      matchInfo.gameStart(false)
-      matchInfo.data()
-    }
-  })
-}, 1000);
-
-
-// Escudos
-
-const teamsSelector = document.querySelectorAll('.versus img');
-const adversary = versus.dataset.adversary;
-
-async function getTeam() {
-  const response = await fetch('https://api.jsonbin.io/b/61250df0c5159b35ae0344f5');
-  const resolve = await response.json();
-  resolve.forEach((r => {
-    if (r.nome == adversary) {
-      teamsSelector[1].src += `/img/escudos/${r.escudo}`;
-    }
-  }))
-}
-
-
-// Mandante
-
-const result = versus.dataset.out;
-
-function isOut(boo) {
-  const casa = document.querySelector('.versus img:first-child');
-  const fora = document.querySelector('.versus img:last-child');
-  const x = document.querySelector('.versus span');
-
-  if (boo === 'fora') {
-    casa.style.order = '3';
-    fora.style.order = '1';
-  } else {
-    casa.style.order = '1';
-    fora.style.order = '3';
   }
-}
 
+  const containerDay = document.querySelector('.match-day .day');
+  const containerNumbers = document.querySelectorAll('.match-day .day p');
+  const containerDate = document.querySelector('.match-data .date');
+  const versus = document.querySelector('.versus');
+  const data = versus.dataset.day;
+  const horario = versus.dataset.time;
 
-// Acionamento das funções
+  function formatDate() {
+    let extensiveDate = ''
+    const months = ["January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+    ];
+    const cleanMonth = +data.split('/').join('').slice(2,4);
+    extensiveDate = months[cleanMonth - 1];
+    return `$1 ${extensiveDate} $3`
+  }
 
-const matchInfo = {
-  data() {
-    countdown(completeDate);
-    containerDate.innerText = dateInDom;
-  },
-  gameStart(start) {
+  function formatDateInDom() {
+    let monthPtBr = ''
+    const monthsBr = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
+    "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"
+    ];
+    const cleanMonthBr = +data.split('/').join('').slice(2,4);
+    monthPtBr = monthsBr[cleanMonthBr - 1];
+    return `$1 de ${monthPtBr}`
+  }
+
+  const cleanDate = data.replace(/(\d{2})\/(\d{2})\/(\d{4})/g, formatDate());
+  const dateInDom = data.replace(/(\d{2})\/(\d{2})\/(\d{4})/g, formatDateInDom());
+
+  const completeDate = `${cleanDate} ${horario} GMT-0300`;
+
+  const h2 = document.createElement('h2');
+  h2.innerText = 'O jogo começou!';
+  h2.classList.add('start-game');
+
+  const restOfDays = setInterval(() => {
     numbers.forEach(number => {
-      if (start === true && +number.innerText < 0) {
-        containerNumbers.forEach(container => {
-          container.style.display = 'none';
-          containerDay.appendChild(h2);
-        })
+      if(+number.innerText < 0) {
+        matchInfo.gameStart(true)
+        clearInterval(restOfDays);
+      } else {
+        matchInfo.gameStart(false)
+        matchInfo.data()
       }
     })
-  },
-  nextAdversary() {
-    getTeam()
-  },
-  mandant() {
-    isOut(result);
+  }, 1000);
+
+
+  // Escudos
+
+  const teamsSelector = document.querySelectorAll('.versus img');
+  const adversary = versus.dataset.adversary;
+
+  async function getTeam() {
+    const response = await fetch('https://api.jsonbin.io/b/61250df0c5159b35ae0344f5');
+    const resolve = await response.json();
+    resolve.forEach((r => {
+      if (r.nome == adversary) {
+        teamsSelector[1].src += `/img/escudos/${r.escudo}`;
+      }
+    }))
+  }
+
+
+  // Mandante
+
+  const result = versus.dataset.out;
+
+  function isOut(boo) {
+    const casa = document.querySelector('.versus img:first-child');
+    const fora = document.querySelector('.versus img:last-child');
+    const x = document.querySelector('.versus span');
+
+    if (boo === 'fora') {
+      casa.style.order = '3';
+      fora.style.order = '1';
+    } else {
+      casa.style.order = '1';
+      fora.style.order = '3';
+    }
+  }
+
+
+  // Acionamento das funções
+
+  const matchInfo = {
+    data() {
+      countdown(completeDate);
+      containerDate.innerText = dateInDom;
+    },
+    gameStart(start) {
+      numbers.forEach(number => {
+        if (start === true && +number.innerText < 0) {
+          containerNumbers.forEach(container => {
+            container.style.display = 'none';
+            containerDay.appendChild(h2);
+          })
+        }
+      })
+    },
+    nextAdversary() {
+      getTeam()
+    },
+    mandant() {
+      isOut(result);
+    }
+  }
+
+  matchInfo.data();
+  matchInfo.gameStart(true);
+  matchInfo.nextAdversary();
+  matchInfo.mandant();
+
+
+  // Videos
+
+  const videos = document.querySelectorAll('.videos-content div iframe');
+
+  async function fetchAPI() {
+    const response = await fetch('https://www.googleapis.com/youtube/v3/search?key=AIzaSyCEc4A5wWiv3zWAAqkqcUEzdk9AINL5kxM&channelId=UCzWBYu-vXwIy6Zd5Bs0K2Uw&part=snippet,id&order=date&maxResults=20');
+    const resolve = await response.json();
+    videos.forEach((video, index) => {
+      videos[index].src += resolve.items[index].id.videoId;
+    })
+  }
+
+  fetchAPI();
+
+
+  // Form 
+
+  const btns = document.querySelectorAll('.options-flex button');
+  const modal = document.querySelectorAll('.modal');
+
+  btns.forEach(btn => {
+    btn.addEventListener('click', handleModal);
+  })
+
+  function handleModal(e) {
+    e.preventDefault();
+    const tgtId = e.target.id + '-mod';
+    modal.forEach(mod => {
+      if (tgtId === mod.id) {
+        mod.classList.add('mod-act');
+        btns.forEach(btn => {
+          btn.classList.remove('active');
+        })
+        e.target.classList.add('active');
+      } else {
+        mod.classList.remove('mod-act');
+      }
+    })
   }
 }
 
-matchInfo.data();
-matchInfo.gameStart(true);
-matchInfo.nextAdversary();
-matchInfo.mandant();
 
 
-// Videos
+function noticesScripts() {
+  // Noticias
 
-const videos = document.querySelectorAll('.videos-content div iframe');
+  const notices = document.querySelectorAll('.blog-post a img');
+  const post = document.querySelectorAll('.blog-post a');
 
-async function fetchAPI() {
-  const response = await fetch('https://www.googleapis.com/youtube/v3/search?key=AIzaSyCEc4A5wWiv3zWAAqkqcUEzdk9AINL5kxM&channelId=UCzWBYu-vXwIy6Zd5Bs0K2Uw&part=snippet,id&order=date&maxResults=20');
-  const resolve = await response.json();
-  videos.forEach((video, index) => {
-    videos[index].src += resolve.items[index].id.videoId;
+  notices.forEach((notice, index) => {
+    notice.style.display = 'none'
+    let change = `linear-gradient(180deg, rgba(0, 0, 0, 0) 44.27%, #000000 100%), url(${notice.src}) no-repeat center`;
+    post[index].style.background = change;
+    post[index].style.backgroundSize = 'cover';
   })
-}
-
-fetchAPI();
 
 
-// Form 
+  // Posts
 
-const btns = document.querySelectorAll('.options-flex button');
-const modal = document.querySelectorAll('.modal');
+  const posts = document.querySelectorAll('.nav-blog a');
+  const navPost = document.querySelector('.nav-blog');
 
-btns.forEach(btn => {
-  btn.addEventListener('click', handleModal);
-})
+  if (posts.length) {
+    createLine();
+    posts.forEach(pst => {
+      if (pst.innerText == '← POSTS ANTIGOS') {
+        pst.innerText = '❯❯';
+        pst.classList.add('next');
+      }
+      if (pst.innerText == 'POSTS NOVOS →') {
+        pst.innerText = '❮❮';
+        pst.classList.add('before');
+      }
+    })
+  }
 
-function handleModal(e) {
-  e.preventDefault();
-  const tgtId = e.target.id + '-mod';
-  modal.forEach(mod => {
-    if (tgtId === mod.id) {
-      mod.classList.add('mod-act');
-      btns.forEach(btn => {
-        btn.classList.remove('active');
-      })
-      e.target.classList.add('active');
-    } else {
-      mod.classList.remove('mod-act');
+  function createLine() {
+    const line = document.createElement('span');
+    line.classList.add('nav-blog-line');
+    navPost.appendChild(line);
+    if (posts.length === 1) {
+      line.style.margin = '0 10px 0 0';
     }
-  })
+  }
 }
+
+const body = document.getElementsByTagName("body")[0];
+
+body.classList.value = body.classList.value.replace(/\s/g, '');
+
+body.classList.value == '' ? homeScripts() : '';
+body.classList.value == 'Notícias' ? noticesScripts() : '';
 
 
