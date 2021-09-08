@@ -107,3 +107,7 @@
   background: blue;
   margin-bottom: 40px;
 }
+
+.related-posts {
+  display: flex;
+}

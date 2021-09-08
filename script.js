@@ -266,6 +266,8 @@ function noticesScripts() {
 }
 
 function postScripts() {
+  // Matéria
+
   const topPostBar = document.querySelector('.top-post-bar');
   const textBlog = document.querySelector('.text-blog');
   topPostBar.nextElementSibling.style.display = 'none';
@@ -275,6 +277,20 @@ function postScripts() {
   postImg.style.background = `url(${postImgSrc}) no-repeat center`;
   postImg.style.backgroundSize = 'cover';
   textBlog.insertBefore(postImg, textBlog.children[1]);
+
+
+  // Posts Relacionados
+
+  const relatedPosts = document.querySelectorAll('.related-posts a');
+  const relatedPostsImg = document.querySelectorAll('.related-posts img');
+  relatedPostsImg.forEach(img => {
+    img.style.display = 'none';
+  })
+  relatedPosts.forEach((post,index) => {
+    console.log(index);
+    post.style.background = `linear-gradient(180deg, rgba(0, 0, 0, 0) 44.27%, #000000 100%), url(${relatedPostsImg[index].src}) no-repeat center`
+    post.style.backgroundSize = 'cover';
+  })
 }
 
 const body = document.getElementsByTagName("body")[0];

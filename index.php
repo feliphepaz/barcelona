@@ -56,17 +56,19 @@ $args = [
     ]
 ];
 $my_query = new wp_query( $args );
-if( $my_query->have_posts() ) {
+if( $my_query->have_posts() ) { ?>
+    <div class="related-posts"> <?php
         while( $my_query->have_posts() ) {
             $my_query->the_post(); ?>
-            <div class="ncc">
 
-                <h5><a href="<?php the_permalink()?>" rel="bookmark" title="<?php the_title(); ?>" rel="nofollow"><?php the_title(); ?></a></h5>
+            <a class='banner' href="<?php the_permalink()?>" rel="bookmark" title="<?php the_title(); ?>" rel="nofollow">
+                <h2><?php the_title(); ?></h2>
+            </a>
+            <?php the_post_thumbnail() ?>
 
-            </div><!--ncc-->
         <?php }
-        wp_reset_postdata();
-    echo '</div><!--related-->';
+        wp_reset_postdata(); ?>
+    </div> <?php
 }
 ?> 
 
