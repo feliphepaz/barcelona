@@ -1,10 +1,41 @@
-<?php get_header(); ?>
+<?php get_header(); 
+
+$style = get_stylesheet_directory_uri();
+?>
+
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 <section class='post'>
     <div class='container'>
+        <div class='top-post-bar'>
+            <div class='top-post-bar-col1'>
+                <span><?php the_date(); ?></span>
+                <?php
+                    $tagspost = get_the_tags();
+                    if ($tagspost) { ?>
+                        <div> <?php
+                        foreach($tagspost as $tagpost) { 
+                            $taglink = get_tag_link($tagpost->term_id); ?>
+                            <a href='<?= $taglink ?>'><?= $tagpost->name; ?></a> <?php
+                        } ?>
+                        </div> <?php
+                    }
+                ?>
+            </div>
+            <div class='top-post-bar-col2'>
+                <h4>Compartilhe!</h4>
+                <?php 
+                $postUrl = 'http' . ( isset( $_SERVER['HTTPS'] ) ? 's' : '' ) . '://' . "{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}"; 
+                ?>
+                <a target="_blank" class="share-button share-facebook" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $postUrl; ?>" title="Share on Facebook"><img src="<?= $style ?>/img/facebook.svg" alt=""></a>
+
+                <a target="_blank" class="share-button share-twitter" href="https://twitter.com/intent/tweet?url=<?php echo $postUrl; ?>&text=<?php echo the_title(); ?>&via=<?php the_author_meta( 'twitter' ); ?>" title="Tweet this"><img src="<?= $style ?>/img/tweet.svg" alt=""></a>
+
+                <a target="_blank" class="share-button share-linkedin" href="https://www.linkedin.com/sharing/share-offsite/?url=<?php echo $postUrl; ?>" title="Share on LinkedIn"><img src="<?= $style ?>/img/linkedin.svg" alt=""></a>
+            </div>
+        </div>
+        <?php the_post_thumbnail(); ?>
         <h1 class='title-blog'><?php the_title(); ?></h1>
-        <img style='color: black'><?php the_post_thumbnail(); ?></img>
         <div class='text-blog'><?php the_content(); ?></div>
     </div>
 </section>

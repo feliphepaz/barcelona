@@ -13,9 +13,9 @@
   --base2: #000000;
   --montserrat: "Montserrat", sans-serif;
   --roboto: "Roboto Mono", monospace;
-  --font18: 1.125rem;
-  --font14: 0.875rem;
   --font12: 0.75rem;
+  --font14: 0.875rem;
+  --font18: 1.125rem;
   --font32: 2rem;
   --font64: 4rem;
 }
@@ -61,4 +61,13 @@ body {
   font-size: var(--font64);
   text-transform: uppercase;
   font-weight: 900;
+}
+
+.banner legend, .blog-post a legend, .top-post-bar-col1 a {
+  color: var(--base1);
+  background: var(--primary);
+  align-self: flex-start;
+  padding: 5px 10px;
+  font-size: var(--font12);
+  margin-bottom: 5px;
 }

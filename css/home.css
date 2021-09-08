@@ -18,21 +18,12 @@ width: 50%;
   padding: 0px 60px 70px 60px;
 }
 
-.banner h2, .blog-post a h2 {
+.banner h2, .blog-post a h2, .text-blog h3 {
   font-family: var(--montserrat);
   font-size: var(--font32);
   color: var(--base1);
   text-transform: uppercase;
   font-weight: 700;
-}
-
-.banner legend, .blog-post a legend {
-  color: var(--base1);
-  background: var(--primary);
-  align-self: flex-start;
-  padding: 5px 10px;
-  font-size: var(--font12);
-  margin-bottom: 5px;
 }
 
 
@@ -210,12 +201,6 @@ width: 50%;
   width: 30%;
   height: 300px;
   padding: 0px 60px 40px 60px;
-  opacity: 0.8;
-}
-
-.notices .container .banner:hover {
-  opacity: 1;
-  transition: .4s;
 }
 
 .notices .col1 .banner:first-child, .col2 .banner:first-child {
