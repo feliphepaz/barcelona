@@ -77,4 +77,25 @@
   transition: 0.4s;
 }
 
+.title-notices {
+  background: var(--secundary);
+  padding: 60px 0px;
+}
+
+.title-notices .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-notices .container h1 {
+  margin-bottom: 0;
+}
+
+.filter-text {
+  margin-bottom: 10px;
+  font-size: var(--font9);
+}
+
 

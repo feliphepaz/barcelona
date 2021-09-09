@@ -2,6 +2,12 @@
 get_header();
 ?>
 
+<div class='title-notices'>
+	<div class='container'>
+		<h1>Todas as notícias</h1>
+	</div>
+</div>
+
 <section class="posts">
 
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>

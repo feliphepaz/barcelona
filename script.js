@@ -299,7 +299,7 @@ const section = document.getElementsByTagName("section")[0];
 body.classList.value = body.classList.value.replace(/\s/g, '');
 
 body.classList.value == '' ? homeScripts() : '';
-body.classList.value == 'Notícias' ? noticesScripts() : '';
+section.classList.contains('posts') ? noticesScripts() : '';
 section.classList.contains('post') ? postScripts() : '';
 
 
