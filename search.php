@@ -4,7 +4,8 @@ get_header();
 
 <div class='title-notices'>
 	<div class='container'>
-		<h1>Todas as notícias</h1>
+		<p class='filter-text'>Filtrando pela busca:</p>
+		<h1><?= get_search_query() ?></h1>
 	</div>
 </div>
 
@@ -14,7 +15,8 @@ get_search_form();
 
 <section class="posts">
 
-	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+	<?php if ( have_posts() ) : while ( have_posts() ) : the_post();?>
+	<?php if (is_search() && ($post->post_type=='page')) continue; ?>
 
 	<div class='container'>
 		<h3 class='notice-date title'><?php the_date() ?></h3>
@@ -35,7 +37,15 @@ get_search_form();
 			<?php previous_posts_link( 'Posts Novos →' ); ?>
 		</div>
 
-	<?php else: endif; ?>
+	<?php else: ?>
+
+		<section class='post-not-found'>
+			<div class='container'>
+				<h1 style='color: #ffffff'>Não conseguimos encontrar nada em sua busca</h1>
+			</div>
+		</section>
+
+	<?php endif; ?>
 
 </section>
 

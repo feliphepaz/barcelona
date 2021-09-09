@@ -263,6 +263,9 @@ function noticesScripts() {
       line.style.margin = '0 10px 0 0';
     }
   }
+
+  const searchForm = document.querySelector('.searchform');
+  searchForm.children[0].classList.add('container');
 }
 
 function postScripts() {

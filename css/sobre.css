@@ -1,0 +1,37 @@
+.sobre {
+  padding: 60px 0px;
+  background: var(--base2);
+}
+
+.sobre .container .title:first-child {
+  width: 40%;
+  margin-right: 60px;
+}
+
+.sobre .container p {
+  width: 60%;
+  font-family: var(--montserrat);
+  line-height: 26px;
+}
+
+.sobre .container + .container {
+  margin-top: 100px;
+}
+
+.sobre .container:last-child {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sobre .container:last-child .title {
+  width: 100%;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.sobre .container:last-child p {
+  background: var(--primaryBold);
+  padding: 40px;
+  border-radius: 20px;
+}

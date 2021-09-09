@@ -98,4 +98,8 @@
   font-size: var(--font9);
 }
 
+.searchform {
+  background: var(--base2) !important;
+}
+
 

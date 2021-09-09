@@ -15,7 +15,7 @@
                 <nav>
                     <h3>Institucional</h3>
                     <ul>
-                        <li><a href="">Quem somos</a></li>
+                        <li><a href="/barcelona/sobre/">Quem somos</a></li>
                         <li><a href="">Nossa história</a></li>
                         <li><a href="">Elenco</a></li>
                         <li><a href="">Diretoria</a></li>
