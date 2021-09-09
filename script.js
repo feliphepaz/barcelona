@@ -281,8 +281,8 @@ function postScripts() {
 
   // Posts Relacionados
 
-  const relatedPosts = document.querySelectorAll('.related-posts a');
-  const relatedPostsImg = document.querySelectorAll('.related-posts img');
+  const relatedPosts = document.querySelectorAll('.related-posts .container a');
+  const relatedPostsImg = document.querySelectorAll('.related-posts .container img');
   relatedPostsImg.forEach(img => {
     img.style.display = 'none';
   })

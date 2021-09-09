@@ -197,7 +197,7 @@ width: 50%;
   margin-left: 20px;
 }
 
-.notices .container .banner {
+.notices .container .banner, .related-posts .container .banner {
   width: 30%;
   height: 300px;
   padding: 0px 60px 40px 60px;
@@ -216,7 +216,7 @@ width: 50%;
   margin-bottom: 20px;
 }
 
-.notices .container .banner h2 {
+.notices .container .banner h2, .related-posts .container .banner h2 {
   font-size: var(--font18);
 }
 
