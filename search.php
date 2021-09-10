@@ -13,6 +13,17 @@ get_header();
 get_search_form();
 ?>
 
+<div class='filtro-tags'>
+	<p>Filtrar por Tags:</p>
+	<ul> <?php
+		$tags = get_tags();
+		foreach ($tags as $tag) { 
+			$taglink = get_tag_link($tag->term_id); ?>
+			<li><a href='<?= $taglink ?>'><?= $tag->name ?></a></li> <?php
+		} ?>
+	</ul>
+</div>
+
 <section class="posts">
 
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post();?>

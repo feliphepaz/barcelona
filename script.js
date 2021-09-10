@@ -238,6 +238,12 @@ function noticesScripts() {
 
   // Posts
 
+  const body = document.getElementsByTagName('body')[0];
+  const className = 'Notícias'
+  if (!body.classList.contains(className)) {
+    body.classList.add(className);
+  }
+
   const posts = document.querySelectorAll('.nav-blog a');
   const navPost = document.querySelector('.nav-blog');
 
@@ -264,8 +270,18 @@ function noticesScripts() {
     }
   }
 
+  const sectionContainer = document.createElement('section');
+  sectionContainer.classList.add('filtro');
+  const divContainer = document.createElement('div');
+  divContainer.classList.add('container');
+  sectionContainer.appendChild(divContainer);
   const searchForm = document.querySelector('.searchform');
-  searchForm.children[0].classList.add('container');
+  divContainer.appendChild(searchForm);
+  const noticias = document.querySelector('.Notícias');
+  noticias.insertBefore(sectionContainer, noticias.children[4]);
+
+  const filtroTags = document.querySelector('.filtro-tags');
+  divContainer.appendChild(filtroTags);
 }
 
 function postScripts() {
