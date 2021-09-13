@@ -40,6 +40,15 @@ width: 50%;
   }
 }
 
+@media (max-width: 650px) {
+  .banners .container {
+    flex-direction: column;
+  }
+  .banners .container a {
+    width: 100%;
+  }
+}
+
 /* Match */
 
 .match {
@@ -178,6 +187,17 @@ width: 50%;
   order: 3;
 }
 
+@media(max-width: 870px) {
+  .match .container {
+    flex-direction: column;
+  }
+  .divide {
+    width: 100%;
+    height: 1px;
+    margin: 40px auto;
+  }
+}
+
 /* Noticias */
 
 .notices {
@@ -258,12 +278,54 @@ width: 50%;
   margin-right: -5px;
 }
 
+@media (max-width: 990px) {
+  .notices .container .col1, .notices .container .col2 {
+    flex-wrap: wrap;
+  }
+  .notices .container .col2 {
+    margin-top: 20px;
+  }
+  .notices .container .col1 a, .notices .container .col2 a {
+    width: 50% !important;
+    height: 360px !important;
+  }
+  .notices .col1 .banner + .banner, .notices .col2 .banner + .banner {
+    margin-left: 20px;
+    width: calc(50% - 20px) !important;
+  }
+  .notices .col1 .banner:last-child, .notices .col2 .banner:last-child {
+    width: 100% !important;
+    margin-left: 0px;
+  }
+  .notices .col2 .banner:last-child {
+    margin-top: 20px;
+  }
+  .notices .col2 .banner:nth-child(2), .col2 .banner:nth-child(3) {
+    margin-top: 0px;
+  }
+  .notices .container::after {
+    margin-top: 40px;
+    position: static;
+    width: 100%;
+    order: 1;
+  }
+  .more-notices {
+    position: static;
+    order: 2;
+    width: auto;
+  }
+  .more-notices a {
+    padding: 0px;
+    margin-top: 20px;
+  }
+}
+
 /* Videos */
 
 .videos {
   padding: 40px 0px 60px 0px;
   background: linear-gradient(180deg, #F9314B 0%, rgba(0, 0, 0, 0.4) 100%), url(../img/bg-videos.jpg);
-  height: 900px;
+  background-size: cover;
 }
 
 .videos .title {
@@ -334,6 +396,28 @@ width: 50%;
 
 .more-videos a span:first-child {
   margin-right: -5px;
+}
+
+@media (max-width: 990px) {
+  .more-videos {
+    flex-direction: column;
+  }
+  .videos-content .col2 iframe {
+    width: 50% !important;
+    height: 350px !important;
+    margin-right: 0px;
+  }
+  .videos-content .col2 iframe + iframe {
+    margin-left: 20px !important;
+  }
+  .videos-content .col2 iframe:last-child {
+    display: none;
+  }
+  .more-videos a {
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 20px;
+  }
 }
 
 /* Faça Parte */
@@ -486,6 +570,18 @@ width: 50%;
   100% {
     opacity: 1;
     transform: translate3d(0px, 0px, 0px);
+  }
+}
+
+@media (max-width: 1440px) {
+  .be-part .container {
+    flex-direction: column;
+  }
+  .be-part .container div:first-child img {
+    display: none;
+  }
+  .form-container {
+    margin-left: 0px;
   }
 }
 

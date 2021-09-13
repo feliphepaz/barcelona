@@ -1,29 +1,51 @@
 function homeScripts() {
+  // Header
+
+  const btnMobile = document.querySelector('.menu-mobile-btn');
+  const menuMobile = document.querySelector('.menu-mobile');
+  btnMobile.addEventListener('click', handleMenu);
+
+  function handleMenu() {
+    menuMobile.classList.toggle('open-menu');
+    if (menuMobile.classList.contains('open-menu')) {
+      btnMobile.children[0].src = btnMobile.children[0].src.replace('open', 'close');
+    } else {
+      btnMobile.children[0].src = btnMobile.children[0].src.replace('close', 'open');
+    }
+  }
+
+
   // Banners
 
   const banners = document.querySelectorAll('.banner');
+  const bannersContainer = document.querySelector('.banners');
 
-  banners.forEach((banner, index) => {
+  banners.forEach((banner) => {
     const bannerLink = banner.dataset.link;
     banner.style.background = `linear-gradient(180deg, rgba(0, 0, 0, 0) 44.27%, #000000 100%), url(${bannerLink}) no-repeat center`;
     banner.style.backgroundSize = 'cover';
+  });
 
-    banner.addEventListener('mouseover', () => {
-        banners[0].style.width = '60%';
-        banners[0].style.transition = '0.5s';
-        banners[1].style.width = '40%'
-      if (index === 1) {
-        banners[1].style.width = '60%';
-        banners[1].style.transition = '0.5s';
-        banners[0].style.width = '40%'
-      }
+  function animaBanners() {
+      banners.forEach((banner, index) => {
+        banner.addEventListener('mouseover', () => {
+          banners[0].style.width = '60%';
+          banners[0].style.transition = '0.5s';
+          banners[1].style.width = '40%'
+        if (index === 1) {
+          banners[1].style.width = '60%';
+          banners[1].style.transition = '0.5s';
+          banners[0].style.width = '40%'
+        }
+      })
+        banner.addEventListener('mouseout', () => {
+          banners[1].style.width = '50%';
+          banners[0].style.width = '50%'
+      })
     })
-      banner.addEventListener('mouseout', () => {
-        banners[1].style.width = '50%';
-        banners[0].style.width = '50%'
-    })
-  })
+  }
 
+  animaBanners();
 
   // Data e countdown
 
