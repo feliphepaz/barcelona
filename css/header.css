@@ -1,5 +1,6 @@
 .header {
-  position: relative;
+  position: fixed;
+  width: 100%;
   z-index: 2;
   display: block;
   background: linear-gradient(
@@ -9,6 +10,7 @@
     ),
     #03468c;
   height: 150px;
+  margin-top: -150px;
 }
 
 .header .container {

@@ -278,7 +278,7 @@ function noticesScripts() {
   const searchForm = document.querySelector('.searchform');
   divContainer.appendChild(searchForm);
   const noticias = document.querySelector('.Notícias');
-  noticias.insertBefore(sectionContainer, noticias.children[4]);
+  noticias.insertBefore(sectionContainer, noticias.children[3]);
 
   const filtroTags = document.querySelector('.filtro-tags');
   divContainer.appendChild(filtroTags);

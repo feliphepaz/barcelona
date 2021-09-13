@@ -14,7 +14,7 @@ get_search_form();
 ?>
 
 <div class='filtro-tags'>
-	<p>Filtrar por Tags:</p>
+	<p class='filter-text'>Filtrar por Tags:</p>
 	<ul> <?php
 		$tags = get_tags();
 		foreach ($tags as $tag) { 

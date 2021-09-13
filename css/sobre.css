@@ -1,6 +1,6 @@
 .sobre {
   padding: 60px 0px;
-  background: var(--base2);
+  background: var(--primaryBold);
 }
 
 .sobre .container .title:first-child {
@@ -31,7 +31,7 @@
 }
 
 .sobre .container:last-child p {
-  background: var(--primaryBold);
+  background: linear-gradient(180deg, #01152A 0%, #000000 100%);
   padding: 40px;
   border-radius: 20px;
 }
