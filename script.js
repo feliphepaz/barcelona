@@ -26,26 +26,41 @@ function homeScripts() {
     banner.style.backgroundSize = 'cover';
   });
 
-  function animaBanners() {
-      banners.forEach((banner, index) => {
-        banner.addEventListener('mouseover', () => {
-          banners[0].style.width = '60%';
-          banners[0].style.transition = '0.5s';
-          banners[1].style.width = '40%'
-        if (index === 1) {
-          banners[1].style.width = '60%';
-          banners[1].style.transition = '0.5s';
-          banners[0].style.width = '40%'
-        }
-      })
-        banner.addEventListener('mouseout', () => {
-          banners[1].style.width = '50%';
-          banners[0].style.width = '50%'
-      })
-    })
+  function animaBannerOnOver(e) {
+      banners[0].style.width = '60%';
+      banners[0].style.transition = '0.5s';
+      banners[1].style.width = '40%';
+      if (e.currentTarget.id === '1') {
+        banners[1].style.width = '60%';
+        banners[1].style.transition = '0.5s';
+        banners[0].style.width = '40%'
+      }
   }
 
-  animaBanners();
+  function animaBannerOnOut() {
+    banners[1].style.width = '50%';
+    banners[0].style.width = '50%'
+  }
+
+  function verify() {
+    if (window.innerWidth < 650) {
+      banners.forEach((banner) => {
+        banner.removeEventListener('mouseover', animaBannerOnOver);
+        banner.removeEventListener('mouseout', animaBannerOnOut);
+        banners[0].style.width = '100%';
+        banners[1].style.width = '100%';
+      })
+    } else {
+      banners.forEach((banner) => {
+        banner.addEventListener('mouseover', animaBannerOnOver);
+        banner.addEventListener('mouseout', animaBannerOnOut);
+      })
+    }
+  }
+
+  verify();
+
+  window.addEventListener('resize', verify);
 
   // Data e countdown
 
