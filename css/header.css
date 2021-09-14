@@ -13,10 +13,6 @@
   margin-top: -150px;
 }
 
-.logo {
-  margin: 0 auto;
-}
-
 .header .container {
   justify-content: space-between;
   align-items: center;
@@ -59,7 +55,7 @@
 }
 
 .menu-mobile-btn {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   width: 40px;
@@ -146,5 +142,19 @@
   .header .container .menu-redes, .header .container .cta-visite {
     display: none;
   }
+  .logo a img {
+    width: 120px;
+  }
+  .header {
+    height: 100px;
+    margin-top: -100px;
+  }
+  .menu-mobile-btn {
+    display: flex;
+    margin-top: -30px;
+  }
+  .banners, .title-notices, .post {
+    margin-top: 100px !important;
+  } 
 }
 

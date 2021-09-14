@@ -143,3 +143,40 @@
   padding: 40px 0px;
   border-radius: 20px;
 }
+
+@media (max-width: 1440px) {
+  .wp-block-image img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 1065px) {
+  .top-post-bar, .title-blog, .text-blog p {
+    padding: 0px !important;
+  }
+}
+
+@media (max-width: 650px) {
+  .top-post-bar {
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+  .top-post-bar-col1 {
+    margin-bottom: 10px;
+  }
+  .related-posts .container .banner {
+    width: 100%;
+  }
+}
+
+@media (max-width: 570px) {
+  .title-blog {
+    font-size: var(--font32) !important;
+  }
+  .text-blog h2 {
+    font-weight: 400;
+  }
+}

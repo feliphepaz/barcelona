@@ -3,7 +3,7 @@
   background: var(--primaryBold);
 }
 
-.sobre .container .title:first-child {
+.sobre .container:first-child .title {
   width: 40%;
   margin-right: 60px;
 }
@@ -34,4 +34,29 @@
   background: linear-gradient(180deg, #01152A 0%, #000000 100%);
   padding: 40px;
   border-radius: 20px;
+}
+
+@media (max-width: 1060px) {
+  .sobre .container p {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .sobre .container {
+    flex-direction: column;
+  }
+  .sobre .container:first-child .title {
+    margin-bottom: 40px;
+    margin-right: 0px !important;
+  }
+  .sobre .container .title {
+    width: 100% !important;
+  }
+  .sobre .container:last-child p {
+    padding: 0px;
+  }
+  .sobre .container:last-child .title {
+    text-align: left;
+  }
 }

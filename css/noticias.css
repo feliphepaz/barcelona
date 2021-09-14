@@ -93,6 +93,7 @@
 
 .title-notices .container h1 {
   margin-bottom: 0;
+  text-align: center;
 }
 
 .filter-text {
@@ -172,6 +173,25 @@
 
 .filtro-tags ul li {
   margin: 5px;
+}
+
+@media (max-width: 885px) {
+  .filtro .container {
+    flex-direction: column;
+  }
+  #searchform, .filtro-tags {
+    width: 100%;
+  }
+  #searchform {
+    margin-right: 0px !important;
+    margin-bottom: 40px !important;
+  }
+}
+
+@media (max-width: 520px) {
+  .blog-post a h2 {
+    font-size: var(--font18);
+  }
 }
 
 
