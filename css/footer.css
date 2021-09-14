@@ -25,7 +25,6 @@
   font-size: var(--font14);
   text-transform: uppercase;
   letter-spacing: 4px;
-  margin-right: -4px;
   margin-bottom: 40px;
 }
 
@@ -131,14 +130,6 @@
     color: var(--primary);
     animation: seta .5s ease-in 0s infinite alternate;
   }
-  @keyframes seta {
-    from {
-      right: -5px;
-    }
-    to {
-      right: 0px;
-    }
-  }
 }
 
 @media (max-width: 520px) {
@@ -152,7 +143,7 @@
   }
   .partners a img {
     display: block;
-    width: 70%;
+    width: 60%;
     margin: 0 auto;
   }
 }

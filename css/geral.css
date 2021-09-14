@@ -19,6 +19,7 @@
   --font14: 0.875rem;
   --font18: 1.125rem;
   --font32: 2rem;
+  --font36: 2.25rem;
   --font64: 4rem;
 }
 
@@ -67,7 +68,7 @@ body {
 
 @media (max-width: 520px) {
   .title {
-    font-size: var(--font32);
+    font-size: var(--font36);
   }
 }
 
@@ -78,4 +79,13 @@ body {
   padding: 5px 10px;
   font-size: var(--font12);
   margin-bottom: 5px;
+}
+
+@keyframes seta {
+  from {
+    right: -5px;
+  }
+  to {
+    right: 0px;
+  }
 }

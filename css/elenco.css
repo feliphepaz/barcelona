@@ -2,3 +2,85 @@
   padding: 60px 0px;
   background: var(--primaryBold);
 }
+
+.goleiros {
+  width: 100%;
+}
+
+.goleiros h2 {
+  font-size: var(--font36);
+  color: var(--secundary);
+}
+
+.goleiros ul {
+  display: flex;
+  margin-top: 40px;
+}
+
+.goleiros ul li {
+  background: var(--primary);
+  display: block;
+  width: 25%;
+  height: 320px;
+}
+
+.goleiros ul li h3 {
+  font-family: var(--montserrat);
+  font-size: var(--font14);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-align: center;
+  background: var(--secundary);
+  padding: 10px;
+  margin-top: -50px;
+  position: relative;
+}
+
+.tooltip-player {
+  display: flex;
+  background: linear-gradient(180deg, #000000 0%, #03468C 100%);
+  padding: 40px;
+}
+
+.goleiros ul li:hover {
+  background: var(--base1);
+  transition: .5s;
+}
+
+.goleiros ul li img {
+  display: block;
+  margin: 0 auto;
+  margin-top: -20px;
+}
+
+.goleiros ul li + li {
+  margin-left: 20px;
+}
+
+@media (max-width: 800px) {
+  .goleiros ul {
+    flex-wrap: wrap;
+  }
+  .goleiros ul li {
+    width: calc(50% - 10px);
+    margin-left: 0px !important;
+    margin-bottom: 20px;
+  }
+  .goleiros ul li:last-child {
+    margin-bottom: 0px;
+  }
+  .goleiros ul li:nth-child(odd) {
+    background: red;
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 520px) {
+  .goleiros ul li {
+    width: 100%;
+  }
+  .goleiros ul li:nth-child(odd) {
+    background: red;
+    margin-right: 0px;
+  }
+}

@@ -29,7 +29,7 @@
 
 .notice-date {
   margin-bottom: 20px;
-  font-size: 36px !important;
+  font-size: var(--font36);
   color: var(--secundary);
 }
 
