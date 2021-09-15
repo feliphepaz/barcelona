@@ -16,7 +16,7 @@ $style = get_stylesheet_directory_uri(); ?>
 				<h2 class='title'>Treinador</h2>
 				<ul>
 					<li>
-						<img src="<?= $style ?>/img/memphis.png" alt="">
+						<img src="<?= $style ?>/img/player.png" alt="">
 						<h3>?????</h3>
 						<div class='tooltip-player'>
 							<p>Em breve mais informações sobre a diretoria e comissão técnica do clube.
@@ -28,14 +28,14 @@ $style = get_stylesheet_directory_uri(); ?>
 				<h2 class='title'>Treinadores Assistentes</h2>
 				<ul>
 					<li>
-						<img src="<?= $style ?>/img/memphis.png" alt="">
+						<img src="<?= $style ?>/img/player.png" alt="">
 						<h3>?????</h3>
 						<div class='tooltip-player'>
 							<p>Em breve mais informações sobre a diretoria e comissão técnica do clube.</p>
 						</div>
 					</li>
 					<li>
-						<img src="<?= $style ?>/img/memphis.png" alt="">
+						<img src="<?= $style ?>/img/player.png" alt="">
 						<h3>?????</h3>
 						<div class='tooltip-player'>
 							<p>Em breve mais informações sobre a diretoria e comissão técnica do clube.</p>
@@ -47,14 +47,14 @@ $style = get_stylesheet_directory_uri(); ?>
 				<h2 class='title'>Treinadores de Goleiros</h2>
 				<ul>
 					<li>
-						<img src="<?= $style ?>/img/memphis.png" alt="">
+						<img src="<?= $style ?>/img/player.png" alt="">
 						<h3>?????</h3>
 						<div class='tooltip-player'>
 							<p>Em breve mais informações sobre a diretoria e comissão técnica do clube.</p>
 						</div>
 					</li>
 					<li>
-						<img src="<?= $style ?>/img/memphis.png" alt="">
+						<img src="<?= $style ?>/img/player.png" alt="">
 						<h3>?????</h3>
 						<div class='tooltip-player'>
 							<p>Em breve mais informações sobre a diretoria e comissão técnica do clube.</p>
@@ -66,14 +66,14 @@ $style = get_stylesheet_directory_uri(); ?>
 				<h2 class='title'>Preparadores Físicos</h2>
 				<ul>
 					<li>
-						<img src="<?= $style ?>/img/memphis.png" alt="">
+						<img src="<?= $style ?>/img/player.png" alt="">
 						<h3>?????</h3>
 						<div class='tooltip-player'>
 							<p>Em breve mais informações sobre a diretoria e comissão técnica do clube.</p>
 						</div>
 					</li>
 					<li>
-						<img src="<?= $style ?>/img/memphis.png" alt="">
+						<img src="<?= $style ?>/img/player.png" alt="">
 						<h3>?????</h3>
 						<div class='tooltip-player'>
 							<p>Em breve mais informações sobre a diretoria e comissão técnica do clube.</p>
@@ -85,21 +85,21 @@ $style = get_stylesheet_directory_uri(); ?>
 				<h2 class='title'>Analistas de Vídeo</h2>
 				<ul>
 					<li>
-						<img src="<?= $style ?>/img/memphis.png" alt="">
+						<img src="<?= $style ?>/img/player.png" alt="">
 						<h3>?????</h3>
 						<div class='tooltip-player'>
 							<p>Em breve mais informações sobre a diretoria e comissão técnica do clube.</p>
 						</div>
 					</li>
 					<li>
-						<img src="<?= $style ?>/img/memphis.png" alt="">
+						<img src="<?= $style ?>/img/player.png" alt="">
 						<h3>?????</h3>
 						<div class='tooltip-player'>
 							<p>Em breve mais informações sobre a diretoria e comissão técnica do clube.</p>
 						</div>
 					</li>
 					<li>
-						<img src="<?= $style ?>/img/memphis.png" alt="">
+						<img src="<?= $style ?>/img/player.png" alt="">
 						<h3>?????</h3>
 						<div class='tooltip-player'>
 							<p>Em breve mais informações sobre a diretoria e comissão técnica do clube.</p>

@@ -26,55 +26,70 @@ $style = get_stylesheet_directory_uri();
                 <div class='redes'>
                     <p>Siga as nossas redes!</p>
                     <ul class='redes-lista'>
-                        <li><a href=""><img src="<?= $style ?>/img/facebook.svg" alt=""></a></li>
-                        <li><a href=""><img src="<?= $style ?>/img/instagram.svg" alt=""></a></li>
-                        <li><a href=""><img src="<?= $style ?>/img/tweet.svg" alt=""></a></li>
+                        <li><a href="https://www.facebook.com/barcelona.ilheus.18" target='_blank'><img src="<?= $style ?>/img/facebook.svg" alt=""></a></li>
+                        <li><a href="https://www.instagram.com/barcelonailheus/" target='_blank'><img src="<?= $style ?>/img/instagram.svg" alt=""></a></li>
+                        <li><a href="https://twitter.com/barcelonafcne" target='_blank'><img src="<?= $style ?>/img/tweet.svg" alt=""></a></li>
                     </ul>
                 </div>
                 <nav class='menu-nav'>
                     <ul class='menu'>
-                        <li><a href="">Início</a></li>
-                        <li><a href="">Institucional</a></li>
-                        <nav class='tooltip-one'>
-                            <ul>
-                                <li><a href="">Notícias</a></li>                                
-                                <li><a href="">Quem somos</a></li>
-                                <li><a href="">Nossa história</a></li>
-                                <li><a href="">Elenco</a></li>
-                                <li><a href="">Comissão técnica</a></li>
+                        <li><a href="/barcelona/">Início</a></li>
+                        <li data-dropdown><a href="/barcelona/sobre/">Institucional</a>
+                            <ul class='dropdown-menu'>
+                                <li><a href="/barcelona/noticias/">Notícias</a></li>                                
+                                <li><a href="/barcelona/sobre/">Quem somos</a></li>
+                                <li><a href="/barcelona/sobre/#historia">Nossa história</a></li>
+                                <li><a href="/barcelona/elenco/">Elenco</a></li>
+                                <li><a href="/barcelona/comissao-tecnica/">Comissão técnica</a></li>
                             </ul>
-                        </nav>
-                        <li><a href="">Partidas</a></li>
-                        <nav class='tooltip'>
-                            <ul>
-                                <li><a href="">Comprar ingressos</a></li>
-                                <li><a href="">Próximas partidas</a></li>
+                        </li>
+                        <li data-dropdown><a href="/barcelona/partidas/">Partidas</a>
+                            <ul class='dropdown-menu'>
+                                <li><a href="#">Comprar ingressos</a></li>
+                                <li><a href="/barcelona/partidas/">Próximas partidas</a></li>
                             </ul>
-                        </nav>
-                        <li><a href="">Contato</a></li>
-                        <nav class='tooltip'>
-                            <ul>
-                                <li><a href="">Entre em contato</a></li>
-                                <li><a href="">Seja sócio</a></li>
+                        </li>
+                        <li data-dropdown><a href="/barcelona/contato/">Contato</a>
+                            <ul class='dropdown-menu'>
+                                <li><a href="/barcelona/contato/">Entre em contato</a></li>
+                                <li><a href="/barcelona/#faca-parte">Seja sócio</a></li>
                             </ul>
-                        </nav>
+                        </li>
                     </ul>
                 </nav>
             </div>
             <div class='cta-visite'>
-                <a class='cta' href="">Faça parte</a>
-                <a class='visit' href="">Visite a nossa loja</a>
+                <a class='cta' href="/barcelona/#faca-parte">Faça parte</a>
+                <a class='visit' href="#">Visite a nossa loja</a>
             </div>
             <button class='menu-mobile-btn'><img src="<?= $style ?>/img/open.svg" alt=""></button>
         </div>
         <nav class='menu-mobile'>
             <ul>
-                <li><a href="">Início</a></li>
-                <li><a href="">Institucional</a></li>
-                <li><a href="">Partidas</a></li>
-                <li><a href="">Contato</a></li>
-                <li><a class='cta' href="">Faça parte</a></li>
-                <li><a class='visit' href="">Visite a nossa loja</a></li>
+                <li><a href="/barcelona/">Início</a></li>
+                <li><a href="/barcelona/sobre/">Institucional</a>
+                    <ul class='dropdown-menu-mobile'>
+                        <li><a href="/barcelona/noticias/">Notícias</a></li>                                
+                        <li><a href="/barcelona/sobre/">Quem somos</a></li>
+                        <li><a href="/barcelona/sobre/#historia">Nossa história</a></li>
+                        <li><a href="/barcelona/elenco/">Elenco</a></li>
+                        <li><a href="/barcelona/comissao-tecnica/">Comissão técnica</a></li>
+                    </ul>
+                </li>
+                <li><a href="/barcelona/partidas/">Partidas</a>
+                    <ul class='dropdown-menu-mobile'>
+                        <li><a href="#">Comprar ingressos</a></li>
+                        <li><a href="/barcelona/partidas/">Próximas partidas</a></li>
+                    </ul>
+                </li>
+                <li><a href="/barcelona/contato/">Contato</a>
+                    <ul class='dropdown-menu-mobile'>
+                        <li><a href="/barcelona/contato/">Entre em contato</a></li>
+                        <li><a href="/barcelona/#faca-parte">Seja sócio</a></li>
+                    </ul>
+                </li>
+                <li><a class='cta' href="/barcelona/#faca-parte">Faça parte</a></li>
+                <li><a class='visit' href="#">Visite a nossa loja</a></li>
             </ul>
         </nav>
     </header>

@@ -175,6 +175,11 @@
   margin: 5px;
 }
 
+.filtro-tags ul li a:hover, .filtro-tags ul li a:active, .filtro-tag-selected {
+  background: var(--primary) !important;
+  transition: .4s !important; 
+}
+
 @media (max-width: 885px) {
   .filtro .container {
     flex-direction: column;
@@ -191,6 +196,17 @@
 @media (max-width: 520px) {
   .blog-post a h2 {
     font-size: var(--font18);
+  }
+}
+
+@media (max-width: 460px) {
+  #searchform div {
+    flex-direction: column;
+  }
+  #searchform div #searchsubmit {
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 10px;
   }
 }
 

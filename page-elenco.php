@@ -16,7 +16,7 @@ $style = get_stylesheet_directory_uri(); ?>
 				<h2 class='title'>Goleiros</h2>
 				<ul>
 					<li>
-						<img src="<?= $style ?>/img/memphis.png" alt="">
+						<img src="<?= $style ?>/img/player.png" alt="">
 						<h3>?????</h3>
 						<div class='tooltip-player'>
 							<p>Em breve os novos jogadores do Barcelona de Ilhéus serão anunciados. Fique de olho!</p>
@@ -24,7 +24,7 @@ $style = get_stylesheet_directory_uri(); ?>
 						<span class='number-player'>00</span>
 					</li>
 					<li>
-						<img src="<?= $style ?>/img/memphis.png" alt="">
+						<img src="<?= $style ?>/img/player.png" alt="">
 						<h3>?????</h3>
 						<div class='tooltip-player'>
 							<p>Em breve os novos jogadores do Barcelona de Ilhéus serão anunciados. Fique de olho!</p>
@@ -32,7 +32,7 @@ $style = get_stylesheet_directory_uri(); ?>
 						<span class='number-player'>00</span>
 					</li>
 					<li>
-						<img src="<?= $style ?>/img/memphis.png" alt="">
+						<img src="<?= $style ?>/img/player.png" alt="">
 						<h3>?????</h3>
 						<div class='tooltip-player'>
 							<p>Em breve os novos jogadores do Barcelona de Ilhéus serão anunciados. Fique de olho!</p>
@@ -40,7 +40,7 @@ $style = get_stylesheet_directory_uri(); ?>
 						<span class='number-player'>00</span>
 					</li>
 					<li>
-						<img src="<?= $style ?>/img/memphis.png" alt="">
+						<img src="<?= $style ?>/img/player.png" alt="">
 						<h3>?????</h3>
 						<div class='tooltip-player'>
 							<p>Em breve os novos jogadores do Barcelona de Ilhéus serão anunciados. Fique de olho!</p>
@@ -53,7 +53,7 @@ $style = get_stylesheet_directory_uri(); ?>
 				<h2 class='title'>Defensores</h2>
 				<ul>
 					<li>
-						<img src="<?= $style ?>/img/memphis.png" alt="">
+						<img src="<?= $style ?>/img/player.png" alt="">
 						<h3>?????</h3>
 						<div class='tooltip-player'>
 							<p>Em breve os novos jogadores do Barcelona de Ilhéus serão anunciados. Fique de olho!</p>
@@ -61,7 +61,7 @@ $style = get_stylesheet_directory_uri(); ?>
 						<span class='number-player'>00</span>
 					</li>
 					<li>
-						<img src="<?= $style ?>/img/memphis.png" alt="">
+						<img src="<?= $style ?>/img/player.png" alt="">
 						<h3>?????</h3>
 						<div class='tooltip-player'>
 							<p>Em breve os novos jogadores do Barcelona de Ilhéus serão anunciados. Fique de olho!</p>
@@ -69,7 +69,7 @@ $style = get_stylesheet_directory_uri(); ?>
 						<span class='number-player'>00</span>
 					</li>
 					<li>
-						<img src="<?= $style ?>/img/memphis.png" alt="">
+						<img src="<?= $style ?>/img/player.png" alt="">
 						<h3>?????</h3>
 						<div class='tooltip-player'>
 							<p>Em breve os novos jogadores do Barcelona de Ilhéus serão anunciados. Fique de olho!</p>
@@ -77,7 +77,7 @@ $style = get_stylesheet_directory_uri(); ?>
 						<span class='number-player'>00</span>
 					</li>
 					<li>
-						<img src="<?= $style ?>/img/memphis.png" alt="">
+						<img src="<?= $style ?>/img/player.png" alt="">
 						<h3>?????</h3>
 						<div class='tooltip-player'>
 							<p>Em breve os novos jogadores do Barcelona de Ilhéus serão anunciados. Fique de olho!</p>
@@ -90,7 +90,7 @@ $style = get_stylesheet_directory_uri(); ?>
 				<h2 class='title'>Meio-campistas</h2>
 				<ul>
 					<li>
-						<img src="<?= $style ?>/img/memphis.png" alt="">
+						<img src="<?= $style ?>/img/player.png" alt="">
 						<h3>?????</h3>
 						<div class='tooltip-player'>
 							<p>Em breve os novos jogadores do Barcelona de Ilhéus serão anunciados. Fique de olho!</p>
@@ -98,7 +98,7 @@ $style = get_stylesheet_directory_uri(); ?>
 						<span class='number-player'>00</span>
 					</li>
 					<li>
-						<img src="<?= $style ?>/img/memphis.png" alt="">
+						<img src="<?= $style ?>/img/player.png" alt="">
 						<h3>?????</h3>
 						<div class='tooltip-player'>
 							<p>Em breve os novos jogadores do Barcelona de Ilhéus serão anunciados. Fique de olho!</p>
@@ -106,7 +106,7 @@ $style = get_stylesheet_directory_uri(); ?>
 						<span class='number-player'>00</span>
 					</li>
 					<li>
-						<img src="<?= $style ?>/img/memphis.png" alt="">
+						<img src="<?= $style ?>/img/player.png" alt="">
 						<h3>?????</h3>
 						<div class='tooltip-player'>
 							<p>Em breve os novos jogadores do Barcelona de Ilhéus serão anunciados. Fique de olho!</p>
@@ -114,7 +114,7 @@ $style = get_stylesheet_directory_uri(); ?>
 						<span class='number-player'>00</span>
 					</li>
 					<li>
-						<img src="<?= $style ?>/img/memphis.png" alt="">
+						<img src="<?= $style ?>/img/player.png" alt="">
 						<h3>?????</h3>
 						<div class='tooltip-player'>
 							<p>Em breve os novos jogadores do Barcelona de Ilhéus serão anunciados. Fique de olho!</p>
@@ -127,7 +127,7 @@ $style = get_stylesheet_directory_uri(); ?>
 				<h2 class='title'>Atacantes</h2>
 				<ul>
 					<li>
-						<img src="<?= $style ?>/img/memphis.png" alt="">
+						<img src="<?= $style ?>/img/player.png" alt="">
 						<h3>?????</h3>
 						<div class='tooltip-player'>
 							<p>Em breve os novos jogadores do Barcelona de Ilhéus serão anunciados. Fique de olho!</p>
@@ -135,7 +135,7 @@ $style = get_stylesheet_directory_uri(); ?>
 						<span class='number-player'>00</span>
 					</li>
 					<li>
-						<img src="<?= $style ?>/img/memphis.png" alt="">
+						<img src="<?= $style ?>/img/player.png" alt="">
 						<h3>?????</h3>
 						<div class='tooltip-player'>
 							<p>Em breve os novos jogadores do Barcelona de Ilhéus serão anunciados. Fique de olho!</p>
@@ -143,7 +143,7 @@ $style = get_stylesheet_directory_uri(); ?>
 						<span class='number-player'>00</span>
 					</li>
 					<li>
-						<img src="<?= $style ?>/img/memphis.png" alt="">
+						<img src="<?= $style ?>/img/player.png" alt="">
 						<h3>?????</h3>
 						<div class='tooltip-player'>
 							<p>Em breve os novos jogadores do Barcelona de Ilhéus serão anunciados. Fique de olho!</p>
@@ -151,7 +151,7 @@ $style = get_stylesheet_directory_uri(); ?>
 						<span class='number-player'>00</span>
 					</li>
 					<li>
-						<img src="<?= $style ?>/img/memphis.png" alt="">
+						<img src="<?= $style ?>/img/player.png" alt="">
 						<h3>?????</h3>
 						<div class='tooltip-player'>
 							<p>Em breve os novos jogadores do Barcelona de Ilhéus serão anunciados. Fique de olho!</p>

@@ -33,6 +33,7 @@
   position: absolute;
   left: 0px;
   margin-left: 0px;
+  padding-top: 60px !important;
   background: var(--primary);
   padding: 20px;
   margin-top: -42px;
@@ -41,30 +42,41 @@
   z-index: -10;
 }
 
+.menu-mobile > ul {
+  overflow-y: auto;
+  height: 400px;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
 @keyframes open {
   from {
     opacity: 0;
+    transform: translate3d(-30px, 0px, 0px);
   }
   to {
     opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
   }
 }
 
 @keyframes close {
   from {
     opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
   }
   to {
     opacity: 0;
+    transform: translate3d(-30px, 0px, 0px);
   }
 }
 
 .open-menu {
-  animation: open 1s forwards;
+  animation: open .4s forwards;
 }
 
 .close-menu {
-  animation: close 1s forwards;
+  animation: close .4s forwards;
 }
 
 
@@ -88,6 +100,10 @@
   font-size: var(--font18);
   text-decoration: none;
   text-transform: uppercase;
+}
+
+.menu li:first-child a:hover, .visit:hover {
+  text-decoration: underline !important;
 }
 
 .menu-mobile li + li {
@@ -153,38 +169,74 @@
   margin-top: -40px;
 }
 
-.tooltip {
+[data-dropdown] {
+  position: relative;
+}
+
+[data-dropdown] .dropdown-menu {
   display: none;
 }
 
-.tooltip-one {
-  display: none;
+[data-dropdown]:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu {
   position: absolute;
-  left: 125px;
-  top: 30px;
   background: linear-gradient(180deg, #000000 0%, #03468C 100%);
+  z-index: 200;
+  position: absolute;
+  top: 22px;
   padding: 10px;
-  width: 180px;
+  width: 200px;
+  animation: slideDown .4s forwards;
 }
 
-.tooltip-one ul li {
-  margin-bottom: 5px;
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translate3d(0px, -10px, 0px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+  }
 }
 
-.tooltip-one ul li a {
+.dropdown-menu::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -4px;
+  width: 0px;
+  height: 0px;
+  border-bottom: 10px solid var(--base2);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+}
+
+.dropdown-menu-mobile {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.dropdown-menu li a, .dropdown-menu-mobile li a {
   color: var(--base1);
   text-decoration: none;
   font-size: var(--font14);
   text-transform: none;
 }
 
-.tooltip-one ul li a:hover {
+.dropdown-menu li + li {
+  margin-top: 5px;
+}
+
+.dropdown-menu li a:hover {
   text-decoration: underline;
 }
 
-.active-tooltip {
-  display: block;
-}
+
+
 
 @media(max-width: 1130px) {
   .header .container .menu-redes, .header .container .cta-visite {

@@ -22,7 +22,7 @@ $style = get_stylesheet_directory_uri(); ?>
         A partir da Campanha Faça Parte, você pode nos ajudar a preencher esse grande objetivo. Seja uma das peças, entrando para o nosso time, da forma que você puder colaborar!</p>
     </div>
 
-    <div class='container'>
+    <div class='container' id='historia'>
         <h2 class='title'>Nossa História</h2>
         <p>EU NASCI, A DOIS ANOS ATRÁS. 
         <br><br>

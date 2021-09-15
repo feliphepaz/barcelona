@@ -291,6 +291,9 @@ function noticesScripts() {
     }
   }
 
+
+  // Tags
+
   const sectionContainer = document.createElement('section');
   sectionContainer.classList.add('filtro');
   const divContainer = document.createElement('div');
@@ -303,6 +306,15 @@ function noticesScripts() {
 
   const filtroTags = document.querySelector('.filtro-tags');
   divContainer.appendChild(filtroTags);
+
+  const tagsBtn = document.querySelectorAll('.filtro-tags ul li a');
+  const tagName = document.querySelector('.title-notices .container h1');
+
+  tagsBtn.forEach((btn) => {
+    if (btn.innerText === tagName.innerText.toLowerCase()) {
+      btn.classList.add('filtro-tag-selected');
+    }
+  })
 }
 
 function postScripts() {
@@ -337,24 +349,31 @@ function postScripts() {
 
 const btnMobile = document.querySelector('.menu-mobile-btn');
 const menuMobile = document.querySelector('.menu-mobile');
+const menuMobileBtns = document.querySelectorAll('.menu-mobile ul li a');
 btnMobile.addEventListener('click', handleBtn);
+
+function closeMenu() {
+  btnMobile.children[0].src = btnMobile.children[0].src.replace('close', 'open');
+  menuMobile.classList.remove('open-menu');
+  menuMobile.classList.add('close-menu');
+  setTimeout(() => {
+    menuMobile.style.display = 'none'
+  }, 400)
+}
+
+menuMobileBtns.forEach((btn) => {
+  btn.addEventListener('click', closeMenu);
+})
 
 function handleBtn() {
   btnMobile.classList.toggle('change-btn');
   if (btnMobile.classList.contains('change-btn')) {
     btnMobile.children[0].src = btnMobile.children[0].src.replace('open', 'close');
-    console.log('abriu');
     menuMobile.classList.remove('close-menu');
     menuMobile.classList.add('open-menu');
     menuMobile.style.display = 'block'
   } else {
-    btnMobile.children[0].src = btnMobile.children[0].src.replace('close', 'open');
-    console.log('fechou');
-    menuMobile.classList.remove('open-menu');
-    menuMobile.classList.add('close-menu');
-    setTimeout(() => {
-      menuMobile.style.display = 'none'
-    }, 1000)
+    closeMenu();
   }
 }
 

@@ -11,7 +11,8 @@ function post_data($arg) {
     'title' => $posts->post_title,
     'content' => $posts->post_content,
     'image' => get_the_post_thumbnail_url($posts->ID),
-    'date' => $posts->post_date
+    'date' => $posts->post_date,
+    'link' => get_post_permalink($posts->ID)
     );
     return $post;
 }
@@ -21,12 +22,12 @@ function post_data($arg) {
 <?php get_header(); ?>
     <section class='banners'>
         <div class='container'>
-            <a class='banner' id='0' href="" data-link='<?= post_data(0)['image']; ?>'>
+            <a class='banner' id='0' href="<?= post_data(0)['link'] ?>" data-link='<?= post_data(0)['image']; ?>'>
                 <legend><?= post_data(0)['date'] ?></legend>
                 <h2><?= post_data(0)['title']; ?></h2>
             </a>
 
-            <a class='banner' id='1' href="" data-link='<?= post_data(1)['image']; ?>'>
+            <a class='banner' id='1' href="<?= post_data(1)['link'] ?>" data-link='<?= post_data(1)['image']; ?>'>
                 <legend><?= post_data(1)['date'] ?></legend>
                 <h2><?= post_data(1)['title']; ?></h2>
             </a>
@@ -64,29 +65,29 @@ function post_data($arg) {
     <section class='notices'>
         <div class='container'>
             <div class='col1'>
-                <a class='banner' href="" data-link='<?= post_data(2)['image']; ?>'>
+                <a class='banner' href="<?= post_data(2)['link'] ?>" data-link='<?= post_data(2)['image']; ?>'>
                     <legend><?= post_data(2)['date'] ?></legend>
                     <h2><?= post_data(2)['title']; ?></h2>
                 </a>
-                <a class='banner' href="" data-link='<?= post_data(3)['image']; ?>'>
+                <a class='banner' href="<?= post_data(3)['link'] ?>" data-link='<?= post_data(3)['image']; ?>'>
                     <legend><?= post_data(3)['date'] ?></legend>
                     <h2><?= post_data(3)['title']; ?></h2>
                 </a>
-                <a class='banner' href="" data-link='<?= post_data(4)['image']; ?>'>
+                <a class='banner' href="<?= post_data(4)['link'] ?>" data-link='<?= post_data(4)['image']; ?>'>
                     <legend><?= post_data(4)['date'] ?></legend>
                     <h2><?= post_data(4)['title']; ?></h2>
                 </a>
             </div>
             <div class='col2'>
-                <a class='banner' href="" data-link='<?= post_data(5)['image']; ?>'>
+                <a class='banner' href="<?= post_data(5)['link'] ?>" data-link='<?= post_data(5)['image']; ?>'>
                     <legend><?= post_data(5)['date'] ?></legend>
                     <h2><?= post_data(5)['title']; ?></h2>
                 </a>
-                <a class='banner' href="" data-link='<?= post_data(6)['image']; ?>'>
+                <a class='banner' href="<?= post_data(6)['link'] ?>" data-link='<?= post_data(6)['image']; ?>'>
                     <legend><?= post_data(6)['date'] ?></legend>
                     <h2><?= post_data(6)['title']; ?></h2>
                 </a>
-                <a class='banner' href="" data-link='<?= post_data(7)['image']; ?>'>
+                <a class='banner' href="<?= post_data(7)['link'] ?>" data-link='<?= post_data(7)['image']; ?>'>
                     <legend><?= post_data(7)['date'] ?></legend>
                     <h2><?= post_data(7)['title']; ?></h2>
                 </a>
@@ -112,12 +113,12 @@ function post_data($arg) {
                 </div>
             </div>
             <div class='more-videos'>
-                <a href=""><span>+</span> Para mais vídeos, se <span>inscreva</span> na TV Barça</a>
+                <a href="https://www.youtube.com/channel/UCzWBYu-vXwIy6Zd5Bs0K2Uw" target='_blank'><span>+</span> Para mais vídeos, se <span>inscreva</span> na TV Barça</a>
             </div>
         </div>
     </section>
 
-    <section class='be-part'>
+    <section class='be-part' id='faca-parte'>
         <div class='container'>
             <div>
                 <img src="<?= $style; ?>/img/bfc-onca.png" alt="">

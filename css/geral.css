@@ -89,3 +89,13 @@ body {
     right: 0px;
   }
 }
+
+input, select, textarea {
+  font-family: var(--roboto);
+  font-size: var(--font14);
+  padding: 5px;
+}
+
+#searchform #s {
+  color: var(--base1);
+}
