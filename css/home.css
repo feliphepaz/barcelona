@@ -87,10 +87,22 @@ width: 50%;
 .match-data .date {
   font-family: var(--montserrat);
   font-size: var(--font14);
+  font-weight: 700;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 4px;
   color: var(--secundary);
+}
+
+.match-data .hour {
+  font-family: var(--montserrat);
+  font-size: var(--font12);
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: var(--secundary);
+  margin-top: 10px;
 }
 
 .versus {
@@ -210,6 +222,13 @@ width: 50%;
   }
   .match-day {
     width: 100%;
+  }
+}
+
+@media (max-width: 380px) {
+  .match-day .day .number {
+    font-size: var(--font18);
+    width: 30px;
   }
 }
 

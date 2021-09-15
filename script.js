@@ -1,30 +1,4 @@
 function homeScripts() {
-  // Header
-
-  const btnMobile = document.querySelector('.menu-mobile-btn');
-  const menuMobile = document.querySelector('.menu-mobile');
-  btnMobile.addEventListener('click', handleBtn);
-
-  function handleBtn() {
-    btnMobile.classList.toggle('change-btn');
-    if (btnMobile.classList.contains('change-btn')) {
-      btnMobile.children[0].src = btnMobile.children[0].src.replace('open', 'close');
-      console.log('abriu');
-      menuMobile.classList.remove('close-menu');
-      menuMobile.classList.add('open-menu');
-      menuMobile.style.display = 'block'
-    } else {
-      btnMobile.children[0].src = btnMobile.children[0].src.replace('close', 'open');
-      console.log('fechou');
-      menuMobile.classList.remove('open-menu');
-      menuMobile.classList.add('close-menu');
-      setTimeout(() => {
-        menuMobile.style.display = 'none'
-      }, 1000)
-    }
-  }
-
-
   // Banners
 
   const banners = document.querySelectorAll('.banner');
@@ -357,6 +331,31 @@ function postScripts() {
     post.style.background = `linear-gradient(180deg, rgba(0, 0, 0, 0) 44.27%, #000000 100%), url(${relatedPostsImg[index].src}) no-repeat center`
     post.style.backgroundSize = 'cover';
   })
+}
+
+// Header
+
+const btnMobile = document.querySelector('.menu-mobile-btn');
+const menuMobile = document.querySelector('.menu-mobile');
+btnMobile.addEventListener('click', handleBtn);
+
+function handleBtn() {
+  btnMobile.classList.toggle('change-btn');
+  if (btnMobile.classList.contains('change-btn')) {
+    btnMobile.children[0].src = btnMobile.children[0].src.replace('open', 'close');
+    console.log('abriu');
+    menuMobile.classList.remove('close-menu');
+    menuMobile.classList.add('open-menu');
+    menuMobile.style.display = 'block'
+  } else {
+    btnMobile.children[0].src = btnMobile.children[0].src.replace('close', 'open');
+    console.log('fechou');
+    menuMobile.classList.remove('open-menu');
+    menuMobile.classList.add('close-menu');
+    setTimeout(() => {
+      menuMobile.style.display = 'none'
+    }, 1000)
+  }
 }
 
 const body = document.getElementsByTagName("body")[0];

@@ -18,7 +18,7 @@
                         <li><a href="/barcelona/sobre/">Quem somos</a></li>
                         <li><a href="/barcelona/sobre/">Nossa história</a></li>
                         <li><a href="/barcelona/elenco/">Elenco</a></li>
-                        <li><a href="/barcelona/diretoria/">Diretoria</a></li>
+                        <li><a href="/barcelona/comissao-tecnica/">Comissão Técnica</a></li>
                     </ul>
                 </nav>
                 <nav>
@@ -26,14 +26,14 @@
                     <ul>
                         <li><a href="/barcelona/noticias/">Notícias</a></li>
                         <li><a href="">TV Barça</a></li>
-                        <li><a href="">Contato</a></li>
+                        <li><a href="/barcelona/contato/">Contato</a></li>
                     </ul>
                 </nav>
                 <nav>
                     <h3>Clube</h3>
                     <ul>
                         <li><a href="">Comprar ingressos</a></li>
-                        <li><a href="">Próximas partidas</a></li>
+                        <li><a href="/barcelona/proximas-partidas/">Próximas partidas</a></li>
                         <li><a href="">Seja sócio</a></li>
                     </ul>
                 </nav>

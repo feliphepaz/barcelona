@@ -24,6 +24,7 @@
 
 .menu {
   display: flex;
+  position: relative;
 }
 
 .menu-mobile {
@@ -106,7 +107,7 @@
   align-items: center;
 }
 
-.menu-redes nav::before {
+.menu-redes .menu-nav::before {
   content: "";
   display: block;
   width: 100%;
@@ -150,6 +151,39 @@
 .menu-redes,
 .cta-visite {
   margin-top: -40px;
+}
+
+.tooltip {
+  display: none;
+}
+
+.tooltip-one {
+  display: none;
+  position: absolute;
+  left: 125px;
+  top: 30px;
+  background: linear-gradient(180deg, #000000 0%, #03468C 100%);
+  padding: 10px;
+  width: 180px;
+}
+
+.tooltip-one ul li {
+  margin-bottom: 5px;
+}
+
+.tooltip-one ul li a {
+  color: var(--base1);
+  text-decoration: none;
+  font-size: var(--font14);
+  text-transform: none;
+}
+
+.tooltip-one ul li a:hover {
+  text-decoration: underline;
+}
+
+.active-tooltip {
+  display: block;
 }
 
 @media(max-width: 1130px) {

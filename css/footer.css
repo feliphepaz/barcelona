@@ -36,6 +36,14 @@
   margin-bottom: 5px;
 }
 
+.footer-navegation nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-contact a:hover {
+  text-decoration: underline;
+}
+
 .footer-navegation nav ul li:last-child {
   margin-bottom: 0px;
 }

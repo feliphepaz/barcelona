@@ -31,12 +31,33 @@ $style = get_stylesheet_directory_uri();
                         <li><a href=""><img src="<?= $style ?>/img/tweet.svg" alt=""></a></li>
                     </ul>
                 </div>
-                <nav>
+                <nav class='menu-nav'>
                     <ul class='menu'>
                         <li><a href="">Início</a></li>
                         <li><a href="">Institucional</a></li>
+                        <nav class='tooltip-one'>
+                            <ul>
+                                <li><a href="">Notícias</a></li>                                
+                                <li><a href="">Quem somos</a></li>
+                                <li><a href="">Nossa história</a></li>
+                                <li><a href="">Elenco</a></li>
+                                <li><a href="">Comissão técnica</a></li>
+                            </ul>
+                        </nav>
                         <li><a href="">Partidas</a></li>
+                        <nav class='tooltip'>
+                            <ul>
+                                <li><a href="">Comprar ingressos</a></li>
+                                <li><a href="">Próximas partidas</a></li>
+                            </ul>
+                        </nav>
                         <li><a href="">Contato</a></li>
+                        <nav class='tooltip'>
+                            <ul>
+                                <li><a href="">Entre em contato</a></li>
+                                <li><a href="">Seja sócio</a></li>
+                            </ul>
+                        </nav>
                     </ul>
                 </nav>
             </div>

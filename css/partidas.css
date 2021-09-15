@@ -1,0 +1,36 @@
+.partidas {
+  padding: 60px 0;
+  background: var(--primaryBold);
+}
+
+.partidas .container {
+  flex-direction: column;
+}
+
+.partidas .container .match-data {
+  margin: 0 auto;
+  background: linear-gradient(180deg, #000000 0%, #03468C 100%);
+  padding: 60px 0;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.partidas .container .match-data:last-child {
+  margin-bottom: 0px;
+}
+
+.partidas .container .match-data .versus {
+  margin: 10px auto;
+}
+
+@media (max-width: 630px) {
+  .partidas .versus {
+    width: 200px;
+  }
+  .partidas .versus img {
+    width: 90px;
+  }
+  .partidas .versus img:first-child {
+    width: 80px;
+  }
+}
