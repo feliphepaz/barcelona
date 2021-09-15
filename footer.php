@@ -16,9 +16,9 @@
                     <h3>Institucional</h3>
                     <ul>
                         <li><a href="/barcelona/sobre/">Quem somos</a></li>
-                        <li><a href="">Nossa história</a></li>
-                        <li><a href="">Elenco</a></li>
-                        <li><a href="">Diretoria</a></li>
+                        <li><a href="/barcelona/sobre/">Nossa história</a></li>
+                        <li><a href="/barcelona/elenco/">Elenco</a></li>
+                        <li><a href="/barcelona/diretoria/">Diretoria</a></li>
                     </ul>
                 </nav>
                 <nav>
@@ -67,6 +67,16 @@
                     <a type='tel' href="tel:+5501173982446162">(73) 98244 6162</a>
                     <a href="email" href='mailto:comunicacao@barcelonafc.com.br'>comunicacao@barcelonafc.com.br</a>
                 </div>
+            </div>
+            <div class='footer-contact-mobile'>
+                <h3>Contato</h3>
+                <p>
+                    Av. Osvaldo Cruz, 74, Cidade Nova
+                    <br>
+                    Ilhéus-BA, 45652-130
+                </p>
+                <a type='tel' href="tel:+5501173982446162">(73) 98244 6162</a>
+                <a href="email" href='mailto:comunicacao@barcelonafc.com.br'>comunicacao@barcelonafc.com.br</a>
             </div>
         </div>
     </footer>

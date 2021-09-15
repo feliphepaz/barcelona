@@ -19,8 +19,8 @@ $style = get_stylesheet_directory_uri();
 <body class='<?= wp_title(''); ?>'>
     <header class='header'>
         <div class='container'>
-            <div>
-                <a href=""><img src="<?= $style ?>/img/logo.png" alt=""></a>
+            <div class='logo'>
+                <a href="/barcelona/"><img src="<?= $style ?>/img/logo.png" alt=""></a>
             </div>
             <div class='menu-redes'>
                 <div class='redes'>
@@ -42,7 +42,18 @@ $style = get_stylesheet_directory_uri();
             </div>
             <div class='cta-visite'>
                 <a class='cta' href="">Faça parte</a>
-                <a href="">Visite a nossa loja</a>
+                <a class='visit' href="">Visite a nossa loja</a>
             </div>
+            <button class='menu-mobile-btn'><img src="<?= $style ?>/img/open.svg" alt=""></button>
         </div>
+        <nav class='menu-mobile'>
+            <ul>
+                <li><a href="">Início</a></li>
+                <li><a href="">Institucional</a></li>
+                <li><a href="">Partidas</a></li>
+                <li><a href="">Contato</a></li>
+                <li><a class='cta' href="">Faça parte</a></li>
+                <li><a class='visit' href="">Visite a nossa loja</a></li>
+            </ul>
+        </nav>
     </header>

@@ -1,0 +1,69 @@
+.contato {
+  padding: 60px 0;
+  background: var(--primaryBold);
+}
+
+.form-contact {
+  width: 50%;
+  margin-right: 100px;
+}
+
+.form-contact form {
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  font-size: var(--font18);
+}
+
+.form-contact p {
+  margin-bottom: 40px;
+}
+
+.form-contact form label {
+  color: var(--base1);
+  margin-bottom: 5px;
+}
+
+.form-contact form input, .form-contact form textarea {
+  background: var(--secundaryLight);
+  border: none;
+  height: 37px;
+  margin-bottom: 20px;
+  outline: none;
+}
+
+.form-contact form textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.form-contact form .submit {
+  margin-top: 10px;
+}
+
+.box-contact {
+  width: 50%;
+}
+
+.contato .footer-contact {
+  display: block;
+}
+
+.box-contact iframe {
+  width: 100%;
+  height: 200px;
+  margin-top: 20px;
+}
+
+@media (max-width: 750px) {
+  .contato .container {
+    flex-direction: column;
+  }
+  .form-contact, .box-contact {
+    width: 100%;
+    margin-right: 0px;
+  }
+  .box-contact {
+    margin-top: 60px;
+  }
+}

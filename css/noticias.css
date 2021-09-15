@@ -29,6 +29,7 @@
 
 .notice-date {
   margin-bottom: 20px;
+  font-size: var(--font36);
   color: var(--secundary);
 }
 
@@ -78,6 +79,7 @@
 }
 
 .title-notices {
+  margin-top: 150px;
   background: var(--secundary);
   padding: 60px 0px;
 }
@@ -91,6 +93,7 @@
 
 .title-notices .container h1 {
   margin-bottom: 0;
+  text-align: center;
 }
 
 .filter-text {
@@ -99,7 +102,7 @@
 }
 
 .filtro {
-  background: linear-gradient(180deg, #000000 0%, #03468C 100%);;
+  background: linear-gradient(180deg, #000000 0%, #03468C 100%);
   padding: 60px 0;
 }
 
@@ -110,18 +113,21 @@
 #searchform {
   margin: 0 !important;
   display: flex;
-  width: 40%;
+  width: 50%;
+  margin-right: 100px !important;
 }
 
 #searchform div {
   display: flex;
   width: 100%;
+  align-items: center;
 }
 
 #searchform div #s {
   background: rgba(3, 70, 140, 0.4);
   border: 1px solid var(--primary);
   width: 100%;
+  height: 40px;
   outline: none;
 }
 
@@ -133,16 +139,29 @@
   background: var(--primary);
   color: var(--base1);
   padding: 5px 20px;
+  height: 40px;
   text-decoration: none;
   margin-left: 10px;
   cursor: pointer;
 }
 
+.filtro-tags {
+  width: 50%;
+}
+
+.filtro-tags .filter-text {
+  text-align: center;
+}
+
 .filtro-tags ul {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .filtro-tags ul li a {
+  display: block;
   color: var(--base1);
   background: var(--secundary);
   text-decoration: none;
@@ -153,7 +172,26 @@
 }
 
 .filtro-tags ul li {
-  margin-right: 10px;
+  margin: 5px;
+}
+
+@media (max-width: 885px) {
+  .filtro .container {
+    flex-direction: column;
+  }
+  #searchform, .filtro-tags {
+    width: 100%;
+  }
+  #searchform {
+    margin-right: 0px !important;
+    margin-bottom: 40px !important;
+  }
+}
+
+@media (max-width: 520px) {
+  .blog-post a h2 {
+    font-size: var(--font18);
+  }
 }
 
 

@@ -21,12 +21,12 @@ function post_data($arg) {
 <?php get_header(); ?>
     <section class='banners'>
         <div class='container'>
-            <a class='banner' href="" data-link='<?= post_data(0)['image']; ?>'>
+            <a class='banner' id='0' href="" data-link='<?= post_data(0)['image']; ?>'>
                 <legend><?= post_data(0)['date'] ?></legend>
                 <h2><?= post_data(0)['title']; ?></h2>
             </a>
 
-            <a class='banner' href="" data-link='<?= post_data(1)['image']; ?>'>
+            <a class='banner' id='1' href="" data-link='<?= post_data(1)['image']; ?>'>
                 <legend><?= post_data(1)['date'] ?></legend>
                 <h2><?= post_data(1)['title']; ?></h2>
             </a>

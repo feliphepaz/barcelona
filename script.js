@@ -1,29 +1,76 @@
 function homeScripts() {
+  // Header
+
+  const btnMobile = document.querySelector('.menu-mobile-btn');
+  const menuMobile = document.querySelector('.menu-mobile');
+  btnMobile.addEventListener('click', handleBtn);
+
+  function handleBtn() {
+    btnMobile.classList.toggle('change-btn');
+    if (btnMobile.classList.contains('change-btn')) {
+      btnMobile.children[0].src = btnMobile.children[0].src.replace('open', 'close');
+      console.log('abriu');
+      menuMobile.classList.remove('close-menu');
+      menuMobile.classList.add('open-menu');
+      menuMobile.style.display = 'block'
+    } else {
+      btnMobile.children[0].src = btnMobile.children[0].src.replace('close', 'open');
+      console.log('fechou');
+      menuMobile.classList.remove('open-menu');
+      menuMobile.classList.add('close-menu');
+      setTimeout(() => {
+        menuMobile.style.display = 'none'
+      }, 1000)
+    }
+  }
+
+
   // Banners
 
   const banners = document.querySelectorAll('.banner');
+  const bannersContainer = document.querySelector('.banners');
 
-  banners.forEach((banner, index) => {
+  banners.forEach((banner) => {
     const bannerLink = banner.dataset.link;
     banner.style.background = `linear-gradient(180deg, rgba(0, 0, 0, 0) 44.27%, #000000 100%), url(${bannerLink}) no-repeat center`;
     banner.style.backgroundSize = 'cover';
+  });
 
-    banner.addEventListener('mouseover', () => {
-        banners[0].style.width = '60%';
-        banners[0].style.transition = '0.5s';
-        banners[1].style.width = '40%'
-      if (index === 1) {
+  function animaBannerOnOver(e) {
+      banners[0].style.width = '60%';
+      banners[0].style.transition = '0.5s';
+      banners[1].style.width = '40%';
+      if (e.currentTarget.id === '1') {
         banners[1].style.width = '60%';
         banners[1].style.transition = '0.5s';
         banners[0].style.width = '40%'
       }
-    })
-      banner.addEventListener('mouseout', () => {
-        banners[1].style.width = '50%';
-        banners[0].style.width = '50%'
-    })
-  })
+  }
 
+  function animaBannerOnOut() {
+    banners[1].style.width = '50%';
+    banners[0].style.width = '50%'
+  }
+
+  function verify() {
+    if (window.innerWidth < 650) {
+      banners.forEach((banner) => {
+        banner.removeEventListener('mouseover', animaBannerOnOver);
+        banner.removeEventListener('mouseout', animaBannerOnOut);
+        banners[0].style.width = '100%';
+        banners[1].style.width = '100%';
+      })
+    } else {
+      banners.forEach((banner) => {
+        banner.addEventListener('mouseover', animaBannerOnOver);
+        banner.addEventListener('mouseout', animaBannerOnOut);
+      })
+    }
+  }
+
+  verify();
+
+  window.addEventListener('resize', verify);
 
   // Data e countdown
 
@@ -278,7 +325,7 @@ function noticesScripts() {
   const searchForm = document.querySelector('.searchform');
   divContainer.appendChild(searchForm);
   const noticias = document.querySelector('.Notícias');
-  noticias.insertBefore(sectionContainer, noticias.children[4]);
+  noticias.insertBefore(sectionContainer, noticias.children[3]);
 
   const filtroTags = document.querySelector('.filtro-tags');
   divContainer.appendChild(filtroTags);

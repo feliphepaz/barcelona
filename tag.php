@@ -4,13 +4,8 @@ get_header();
 
 <div class='title-notices'>
 	<div class='container'>
-	<?php 
-  	$tags = get_the_tags();
-  	foreach ($tags as $tag) { ?>
-			<p class='filter-text'>Filtrando pela tag:</p>
-    	<h1><?= $tag->name ?></h1> <?php
-  	}
-  	?>
+		<p class='filter-text'>Filtrando pela tag:</p>
+    <h1><?= single_tag_title(); ?></h1>
 	</div>
 </div>
 
@@ -19,7 +14,7 @@ get_search_form();
 ?>
 
 <div class='filtro-tags'>
-	<p>Filtrar por Tags:</p>
+	<p class='filter-text'>Filtrar por Tags:</p>
 	<ul> <?php
 		$tags = get_tags();
 		foreach ($tags as $tag) { 

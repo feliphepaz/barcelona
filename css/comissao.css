@@ -1,0 +1,8 @@
+.comissao {
+  padding: 60px 0px;
+  background: var(--primaryBold);
+}
+
+.comissao .container {
+  flex-direction: column;
+}
