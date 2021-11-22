@@ -30,7 +30,4 @@
   .partidas .versus img {
     width: 90px;
   }
-  .partidas .versus img:first-child {
-    width: 80px;
-  }
 }

@@ -96,6 +96,18 @@
   display: none;
 }
 
+.partners-itens {
+  margin: -20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.partners-itens li {
+  margin: 20px;
+}
+
 @media(max-width: 1440px) {
   .footer-navegation .divide-vert {
     margin: 0 20px;

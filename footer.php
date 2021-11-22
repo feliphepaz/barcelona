@@ -8,7 +8,14 @@
         <div class='container'>
             <div class='partners'>
                 <p>Patrocinadores</p>
-                <a href="https://adilis.com.br/" target='_blank'><img src="<?= $style ?>/img/adilis.png" alt=""></a>
+                <ul class='partners-itens'>
+                    <li>
+                        <a href="https://adilis.com.br/" target='_blank'><img src="<?= $style ?>/img/adilis.png" alt=""></a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/drogariaboanovaitb/" target='_blank'><img src="<?= $style ?>/img/boanova.png" alt=""></a>
+                    </li>
+                </ul>   
             </div>
             <span class='divide'></span>
             <div class='footer-navegation'>

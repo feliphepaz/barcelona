@@ -6,9 +6,9 @@
 }
 
 :root {
-  --primary: #03468c;
+  --primary: #274282;
   --primaryBold: #01152A;
-  --secundary: #f9314b;
+  --secundary: #BE0039;
   --secundaryLight: #FDC1C9;
   --base1: #ffffff;
   --base2: #000000;
@@ -98,4 +98,18 @@ input, select, textarea {
 
 #searchform #s {
   color: var(--base1);
+}
+
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+    background: var(--secundaryLight);
+    color: var(--primary);
+    text-shadow: none;
+}
+
+strong {
+  font-weight: 700;
 }

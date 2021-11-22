@@ -52,7 +52,7 @@ width: 50%;
 /* Match */
 
 .match {
-  background: linear-gradient(180deg, #000000 0%, #03468C 100%);
+  background: linear-gradient(180deg, #000000 0%, #274282 100%);
   padding: 60px 0px;
 }
 
@@ -156,7 +156,7 @@ width: 50%;
   text-align: center;
 }
 
-.start-game {
+.start-game, .soon {
   font-family: var(--montserrat);
   font-size: var(--font32);
   letter-spacing: 5px;
@@ -187,11 +187,11 @@ width: 50%;
 }
 
 .versus img:first-child {
-  width: 120px;
   order: 1;
 }
 
 .versus span {
+  font-weight: 700;
   order: 2;
 }
 
@@ -212,13 +212,10 @@ width: 50%;
 
 @media (max-width: 520px) {
   .versus {
-    width: 200px;
+    width: 100%;
   }
   .versus img {
     width: 90px;
-  }
-  .versus img:first-child {
-    width: 80px;
   }
   .match-day {
     width: 100%;
@@ -379,7 +376,7 @@ width: 50%;
 
 .videos {
   padding: 40px 0px 60px 0px;
-  background: linear-gradient(180deg, #F9314B 0%, rgba(0, 0, 0, 0.4) 100%), url(../img/bg-videos.jpg);
+  background: linear-gradient(180deg, #BE0039 0%, rgba(0, 0, 0, 0.4) 100%), url(../img/bg-videos.jpg);
   background-size: cover;
 }
 
@@ -497,10 +494,12 @@ width: 50%;
 /* Faça Parte */
 
 .be-part {
-  background: var(--primary);
+  background: linear-gradient(0deg, rgba(39, 66, 130, 0.6), rgba(39, 66, 130, 0.6)), url(../img/bg-facaparte.jpg);
+  background-size: cover;
   text-transform: uppercase;
   font-size: var(--font18);
   padding: 60px;
+  position: relative;
 }
 
 .be-part .container form {
@@ -510,6 +509,13 @@ width: 50%;
 
 .be-part .container {
   align-items: center;
+  justify-content: flex-end;
+}
+
+.be-part-img {
+  position: absolute;
+  bottom: -2px;
+  left: 200px;
 }
 
 .be-part .container form label {
@@ -612,7 +618,6 @@ width: 50%;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  margin-left: 100px;
 }
 
 .form-container > h2 {

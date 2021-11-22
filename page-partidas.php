@@ -16,7 +16,7 @@ $style = get_stylesheet_directory_uri(); ?>
           <p class='league'>Nome da Liga</p>
           <p class='stadium'>Nome do Estádio</p>
           <div class='versus'>
-              <img src="<?= $style; ?>/img/escudos/barcelona.svg" alt="">
+              <img src="<?= $style; ?>/img/logo.png" alt="">
               <span>X</span>
               <img src="<?= $style; ?>/img/escudos/bahia.svg" alt="">
           </div>
@@ -27,7 +27,7 @@ $style = get_stylesheet_directory_uri(); ?>
           <p class='league'>Nome da Liga</p>
           <p class='stadium'>Nome do Estádio</p>
           <div class='versus'>
-              <img src="<?= $style; ?>/img/escudos/barcelona.svg" alt="">
+              <img src="<?= $style; ?>/img/logo.png" alt="">
               <span>X</span>
               <img src="<?= $style; ?>/img/escudos/bahia.svg" alt="">
           </div>
@@ -38,7 +38,7 @@ $style = get_stylesheet_directory_uri(); ?>
           <p class='league'>Nome da Liga</p>
           <p class='stadium'>Nome do Estádio</p>
           <div class='versus'>
-              <img src="<?= $style; ?>/img/escudos/barcelona.svg" alt="">
+              <img src="<?= $style; ?>/img/logo.png" alt="">
               <span>X</span>
               <img src="<?= $style; ?>/img/escudos/bahia.svg" alt="">
           </div>

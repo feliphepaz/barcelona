@@ -20,6 +20,7 @@ function post_data($arg) {
 ?>
 
 <?php get_header(); ?>
+<div id="loading"></div>
     <section class='banners'>
         <div class='container'>
             <a class='banner' id='0' href="<?= post_data(0)['link'] ?>" data-link='<?= post_data(0)['image']; ?>'>
@@ -39,8 +40,8 @@ function post_data($arg) {
             <div class='match-data'>
                 <p class='league'><?= get_post_meta(get_the_ID(), 'campeonato', true); ?></p>
                 <p class='stadium'><?= get_post_meta(get_the_ID(), 'estadio', true); ?></p>
-                <div class='versus' data-day='<?= get_post_meta(get_the_ID(), 'data', true); ?>' data-time='<?= get_post_meta(get_the_ID(), 'horario', true); ?>' data-adversary='<?= get_post_meta(get_the_ID(), 'adversario', true); ?>' data-out='<?= get_post_meta(get_the_ID(), 'casa', true); ?>'>
-                    <img src="<?= $style; ?>/img/escudos/barcelona.svg" alt="">
+                <div class='versus' data-day='<?= get_post_meta(get_the_ID(), 'data', true); ?>' data-time='<?= get_post_meta(get_the_ID(), 'horario', true); ?>' data-adversary='<?= get_post_meta(get_the_ID(), 'adversario', true); ?>' data-out='<?= get_post_meta(get_the_ID(), 'casa', true); ?>' data-soon='<?= get_post_meta(get_the_ID(), 'soon', true); ?>' >
+                    <img src="<?= $style; ?>/img/logo.png" alt="">
                     <span>X</span>
                     <img src="<?= $style; ?>" alt="">
                 </div>
@@ -56,6 +57,7 @@ function post_data($arg) {
                     <p><span class='number'></span> <span class='atr'>H</span></p>
                     <p><span class='number'></span> <span class='atr'>M</span></p>
                     <p><span class='number'></span> <span class='atr'>S</span></p>
+                    <h2 class='soon' style='display: none;'>Qual será o próximo jogo?</h2>
                 </div>
                 <a class='cta' href="<?= get_post_meta(get_the_ID(), 'link', true); ?>" target='_blank'>Comprar Ingressos</a>
             </div>
@@ -120,7 +122,7 @@ function post_data($arg) {
 
     <section class='be-part' id='faca-parte'>
         <div class='container'>
-            <div>
+            <div class='be-part-img'>
                 <img src="<?= $style; ?>/img/bfc-onca.png" alt="">
             </div>
             <div class='form-container'>

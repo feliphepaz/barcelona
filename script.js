@@ -2,7 +2,6 @@ function homeScripts() {
   // Banners
 
   const banners = document.querySelectorAll('.banner');
-  const bannersContainer = document.querySelector('.banners');
 
   banners.forEach((banner) => {
     const bannerLink = banner.dataset.link;
@@ -46,6 +45,7 @@ function homeScripts() {
 
   window.addEventListener('resize', verify);
 
+  
   // Data e countdown
 
   const numbers = document.querySelectorAll('.number');
@@ -89,6 +89,8 @@ function homeScripts() {
   const containerNumbers = document.querySelectorAll('.match-day .day p');
   const containerDate = document.querySelector('.match-data .date');
   const versus = document.querySelector('.versus');
+  const rest = document.querySelector('.match-day .rest');
+  const buy = document.querySelector('.match-day .cta');
   const data = versus.dataset.day;
   const horario = versus.dataset.time;
 
@@ -140,7 +142,7 @@ function homeScripts() {
   const adversary = versus.dataset.adversary;
 
   async function getTeam() {
-    const response = await fetch('https://api.jsonbin.io/b/61250df0c5159b35ae0344f5');
+    const response = await fetch('https://api.jsonbin.io/b/617805f89548541c29c8cdd4');
     const resolve = await response.json();
     resolve.forEach((r => {
       if (r.nome == adversary) {
@@ -200,13 +202,28 @@ function homeScripts() {
   matchInfo.mandant();
 
 
+  // Em breve
+
+  const soon = document.querySelector('.soon');
+
+  if (versus.dataset.soon === 'on') {
+    rest.style.display = 'none';
+    buy.style.display = 'none';
+    containerNumbers.forEach((num) => {
+      num.style.display = 'none';
+    })
+    soon.style.display = 'block';
+  }
+
+
   // Videos
 
   const videos = document.querySelectorAll('.videos-content div iframe');
 
   async function fetchAPI() {
-    const response = await fetch('https://www.googleapis.com/youtube/v3/search?key=AIzaSyCEc4A5wWiv3zWAAqkqcUEzdk9AINL5kxM&channelId=UCzWBYu-vXwIy6Zd5Bs0K2Uw&part=snippet,id&order=date&maxResults=20');
+    const response = await fetch('https://www.googleapis.com/youtube/v3/search?key=AIzaSyArKlS3Db4ZgqHgmUHU6sx3khZ4oGN2A1A&channelId=UCzWBYu-vXwIy6Zd5Bs0K2Uw&part=snippet,id&order=date&maxResults=20');
     const resolve = await response.json();
+    console.log(resolve);
     videos.forEach((video, index) => {
       videos[index].src += resolve.items[index].id.videoId;
     })
@@ -377,12 +394,38 @@ function handleBtn() {
   }
 }
 
+// Modal
+
+const visit = document.querySelector('.visit');
+const tooltipVisit = document.querySelector('.tooltip');
+const pass = document.querySelector('.pass');
+
+pass.addEventListener('click', (e) => {
+  e.preventDefault();
+})
+
+visit.addEventListener('click', (e) => {
+  e.preventDefault();
+})
+
+visit.addEventListener('mouseover', () => {
+  tooltipVisit.style.display = 'block'
+})
+
+visit.addEventListener('mouseleave', () => {
+  tooltipVisit.style.display = 'none'
+})
+
+// Control
+
 const body = document.getElementsByTagName("body")[0];
 const section = document.getElementsByTagName("section")[0];
-
 body.classList.value = body.classList.value.replace(/\s/g, '');
 
-body.classList.value == '' ? homeScripts() : '';
+if (body.classList.value == '') {
+  homeScripts();
+  body.classList.add('Home');
+};
 section.classList.contains('posts') ? noticesScripts() : '';
 section.classList.contains('post') ? postScripts() : '';
 

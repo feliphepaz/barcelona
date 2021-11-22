@@ -3,7 +3,7 @@ $style = get_stylesheet_directory_uri();
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,7 +20,7 @@ $style = get_stylesheet_directory_uri();
     <header class='header'>
         <div class='container'>
             <div class='logo'>
-                <a href="/barcelona/"><img src="<?= $style ?>/img/logo.png" alt=""></a>
+                <a href="/"><img src="<?= $style ?>/img/logo.png" alt=""></a>
             </div>
             <div class='menu-redes'>
                 <div class='redes'>
@@ -33,7 +33,7 @@ $style = get_stylesheet_directory_uri();
                 </div>
                 <nav class='menu-nav'>
                     <ul class='menu'>
-                        <li><a href="/barcelona/">Início</a></li>
+                        <li><a href="/">Início</a></li>
                         <li data-dropdown><a href="/barcelona/sobre/">Institucional</a>
                             <ul class='dropdown-menu'>
                                 <li><a href="/barcelona/noticias/">Notícias</a></li>                                
@@ -45,7 +45,7 @@ $style = get_stylesheet_directory_uri();
                         </li>
                         <li data-dropdown><a href="/barcelona/partidas/">Partidas</a>
                             <ul class='dropdown-menu'>
-                                <li><a href="#">Comprar ingressos</a></li>
+                                <li><a class='pass' href="#">Comprar ingressos (Em breve)</a></li>
                                 <li><a href="/barcelona/partidas/">Próximas partidas</a></li>
                             </ul>
                         </li>
@@ -59,8 +59,9 @@ $style = get_stylesheet_directory_uri();
                 </nav>
             </div>
             <div class='cta-visite'>
-                <a class='cta' href="/barcelona/#faca-parte">Faça parte</a>
+                <a class='cta' href="/barcelona/#faca-parte">Faça parte <span style='display: none;' id='loading'>...</span></a>
                 <a class='visit' href="#">Visite a nossa loja</a>
+                <p class='tooltip'>A loja do Barcelona vem logo ai! Em breve novidades.</p>
             </div>
             <button class='menu-mobile-btn'><img src="<?= $style ?>/img/open.svg" alt=""></button>
         </div>
@@ -78,7 +79,7 @@ $style = get_stylesheet_directory_uri();
                 </li>
                 <li><a href="/barcelona/partidas/">Partidas</a>
                     <ul class='dropdown-menu-mobile'>
-                        <li><a href="#">Comprar ingressos</a></li>
+                        <li><a class='pass' href="#">Comprar ingressos (Em breve)</a></li>
                         <li><a href="/barcelona/partidas/">Próximas partidas</a></li>
                     </ul>
                 </li>
@@ -89,7 +90,7 @@ $style = get_stylesheet_directory_uri();
                     </ul>
                 </li>
                 <li><a class='cta' href="/barcelona/#faca-parte">Faça parte</a></li>
-                <li><a class='visit' href="#">Visite a nossa loja</a></li>
+                <li><a class='visit' href="#">Visite a nossa loja (Em breve)</a></li>
             </ul>
         </nav>
     </header>
