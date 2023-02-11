@@ -1,5 +1,4 @@
 # Barcelona FC ⚽
-[Acesse aqui!](https://barcelonafc.com.br/)
 
 O Barcelona FC ou popularmente conhecido como Barcelona de Ilhéus, é um time de futebol que disputa a elite do campeonato baiano. A proposta foi renovar o seu site antigo do qual era construído em Wix e procurar uma abordagem feita no código, com inspirações em sites de grandes clubes europeus, como o Bayern de Munique, PSG, etc.
 <br>
