@@ -12,4 +12,4 @@ Esse countdown tem como finalidade mostrar ao usuário qual será a próxima par
 **OBS**: Para rodar o projeto localmente, é necessário a criação de um servidor local. Recomendações de softwares que facilitam esse processo: [MAMP](https://www.mamp.info/), [XAMPP](https://www.apachefriends.org/pt_br/index.html) (indicado apenas para computadores que tenham o Windows como sistema operacional) ou o [Local by Flywheel](https://localwp.com/) (já instala todos os arquivos do WordPress).
 #
 #### Créditos / Agradecimentos
-_Projeto desenvolvido para a agência Formulaviral._
+_Projeto desenvolvido para a Agência Formula Group._
